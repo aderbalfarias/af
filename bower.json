@@ -1,12 +1,12 @@
 {
-  "name": "afApp",
-  "homepage": "https://github.com/AderbalFarias/af",
-  "authors": [
-    "Aderbal Farias <aderbalfarias@hotmail.com>"
-  ],
+  "name": "af",
   "description": "",
   "main": "",
+  "authors": [
+    "Aderbal Farias"
+  ],
   "license": "MIT",
+  "homepage": "https://github.com/AderbalFarias/af",
   "ignore": [
     "**/.*",
     "node_modules",
