@@ -1,0 +1,19 @@
+{
+  "name": "af",
+  "version": "1.0.0",
+  "description": "my website\r test again",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AderbalFarias/af.git"
+  },
+  "author": "Aderbal Farias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AderbalFarias/af/issues"
+  },
+  "homepage": "https://github.com/AderbalFarias/af#readme"
+}
