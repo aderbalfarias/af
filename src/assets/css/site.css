@@ -1,11 +1,11 @@
 ﻿body {
-    font-family: Lato, sans-serif;
-    background-image: url("../images/bg.png");
-    background-size: cover;
-    background-position: 50% 50%;
-    background-attachment: fixed;
-    color: #19A3FF;
-    overflow-x: hidden;
+    font-family:Lato, sans-serif;
+    background-image:url("../images/bg.png");
+    background-size:cover;
+    background-position:50% 0;
+    background-attachment:fixed;
+    color:#19A3FF;
+    overflow-x:hidden;
 }
 
 h1,
@@ -14,8 +14,7 @@ h3,
 h4,
 h5,
 h6{
-    font-family: Lato, sans-serif;
-    /*color:#19A3FF;*/
+    font-family:Lato, sans-serif;
 }
 
 h1 {
@@ -26,7 +25,7 @@ h1 {
     letter-spacing:0.02em;
 }
 
-h1.section-title{
+h1.title{
     position:relative;
     margin:0 0 124px;
     font-size:48px;
@@ -35,21 +34,6 @@ h1.section-title{
     text-align:center;
     color:#19A3FF;
     z-index:1;
-}
-
-.section-title span {
-    font-size:150%;
-    font-weight:400;
-}
-
-.section-title [class*=icon]{
-    position:absolute;
-    top:-28px;
-    left:50%;
-    margin-left:-60px;
-    font-size:120px;
-    color:#eee;
-    z-index:-1;
 }
 
 h2 {
@@ -67,31 +51,49 @@ p {
     margin-bottom:20px;
 }
 
-a,
+a {
+    color:#228Ca8;
+    outline:none !important;
+    text-decoration:none;
+}
+
 a:hover,
 a:focus {
     outline:none !important;
     text-decoration:none;
 }
 
-a {
-  color: #228Ca8;
-  text-decoration: none;
+a.decoration,
+a.decoration:hover,
+a.decoration:focus {
+    outline:solid;
+    text-decoration:underline;
 }
 
-a:hover,
-a:focus {
-  color: #229Cc8;
-  text-decoration: none;
+.load {
+    position:fixed;
+    top:0;
+    padding-top:20%;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:1040;
+    display:block;
+    /*overflow: auto;*/
+    /*overflow-y: scroll;*/
 }
 
-a:focus,
-.btn:focus {
-  outline: none;
+.display-none {
+    display: none;
 }
 
-/*Botões*/
-.btn-theme {
+.semi-opac {
+    -ms-opacity:0.5;
+    opacity:0.5;
+}
+
+/* buttons */
+.btn-af {
     color:#fff;
     background-color:#19A3FF;
     padding:15px 90px;
@@ -106,206 +108,13 @@ a:focus,
     transition:background-color 0.2s ease-out;
 }
 
-.btn-theme:hover{
-    cursor:pointer;
-    color:#fff;
-    background-color:#90D2DD;
-}
-
-.btn-theme:active,
-.btn-theme:focus{
-    color:#fff;
-}
-
-.btn-theme [class*=icon]{
-    margin-right:10px;
-}
-
-.btn-theme.transparent {
-    color:#fff;
-    background-color:transparent;
-    padding:14px 35px;
-    border:2px solid #fff;
-    font-weight:400;
-    -webkit-transition:all 0.3s ease-out;
-    -moz-transition:all 0.3s ease-out;
-    -o-transition:all 0.3s ease-out;
-    transition:all 0.3s ease-out;
-}
-
-.btn-theme.transparent:hover,
-.btn-theme.transparent:focus,
-.btn-theme.transparent:active {
-    color:#19A3FF;
+.btn-af:hover {
     background-color:#fff;
-    border:2px solid #fff;
-    opacity:1;
-}
-
-/*Menu*/
-.navbar-brand,
-.navbar-brand:hover,
-.navbar-brand:active,
-.navbar-brand:focus {
-    padding:0 10px;
-    font-size:30px;
-    line-height:30px;
-    font-weight:normal;
-    color:#fff;
-}
-
-.navbar-brand span {
-    font-size: 20px;
-    font-weight: 300;
-}
-
-/*Home*/
-.panel {
-    background:transparent;
     color:#19A3FF;
 }
-
-header.panel{
-    padding:0;
-    margin-bottom:0;
-    min-height:500px;
-}
-
-.panel .left-col,
-.panel .right-col{
-    float:left;
-}
-
-.panel .message-box{
-    width: 100%;
-    margin:300px auto 0;
-    background:#fff;
-    background:rgba(255,255,255,0.9);
-    padding:20px 0;
-}
-
-.panel .left-col{
-    /*width:35%;*/
-    width:45%;
-    text-align:right;
-}
-
-.panel .right-col {
-    /*width:65%;*/
-    width:55%;
-    text-align:left;
-    overflow:hidden;
-    border:none;
-    -webkit-box-shadow:none;
-    -ms-box-shadow:none;
-    box-shadow:none;
-    background:transparent;
-    margin:0;
-    padding:0;
-}
-
-.panel .left-col p{
-    display:inline-block;
-    margin:0;
-    padding:18px 5px 12px 30px;
-    font-size:38px;
-    font-weight:300;
-    line-height:48px;
-}
-
-.panel .left-col p span{
-    font-size:42px;
-    font-weight:400;
-}
-
-.panel .right-col p{
-    display:inline-block;
-    margin:0;
-    padding:10px 30px 10px 5px;
-    font-size:105px;
-    line-height:110px;
-    font-weight:900;
-    text-transform:uppercase;
-}
-
-.panel .slides li {
-    -ms-opacity:0;
-    opacity:0;
-    -webkit-ransition:opacity 0.4s ease-out;
-    -webkit-transition:opacity 0.4s ease-out;
-    -moz-transition:opacity 0.4s ease-out;
-    -ms-transition:opacity 0.4s ease-out;
-    -o-transition:opacity 0.4s ease-out;
-    transition:opacity 0.4s ease-out;
-}
-
-
-.message-title {
-    display: inline-block;
-}
-
-.display-none {
-    display: none;
-}
-
-.title {
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: inherit;
-    color: #333;
-    border: 0;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.title-index {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: inherit;
-    color: #333;
-    border: 0;
-}
-
-.adjust-top {
-    margin-top: 15px;
-}
-
-.section-alert {
-    padding-top: 130px;
-    position: fixed !important;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1040;
-    display: none;
-    overflow: auto;
-}
-
-.load {
-    position: fixed;
-    top: 0;
-    padding-top: 20%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1040;
-    display: block;
-    /*overflow: auto;*/
-    /*overflow-y: scroll;*/
-}
-
-.opac {
-    -ms-opacity: 0.4;
-    opacity: 0.4;
-}
-
+/* end buttons */
 
 /* scroll */
-
 .navbar.shrink {
     z-index: 1000!important
 }
@@ -321,25 +130,180 @@ header.panel{
 }
 
 .scroll-to-top i {
-    color: #fff;
-    font-size: .875rem;
-    margin: 0 9px 8px
+    color:#fff;
+    font-size:.875rem;
+    margin:0 9px 8px
 }
 /* end scroll */
 
-/*Responsive*/
-@media (max-width: 1199px) {
 
-    .panel .left-col p{
+/* ==================================================== */
+/* Start specif style                                   */
+/* ==================================================== */
+
+/* section top */
+.top-bar {
+    background-color: #fff
+}
+
+.top-bar .row ul,
+.top-bar .row ol {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+/* end section top */
+
+/* section alert */
+.show-alert {
+    padding-top:130px;
+    position:fixed !important;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:1040;
+    display:none;
+    overflow:auto;
+}
+
+.message-title {
+    display:inline-block;
+}
+/* end section alert */
+
+/* section home */
+.home-box {
+    background:transparent;
+    color:#19A3FF;
+    margin: 0;
+}
+
+header.home-box {
+    padding:0;
+    min-height:500px;
+}
+
+.home-box .message-box{
+    width:100%;
+    margin:300px auto 0;
+    background:#fff;
+    background:rgba(255,255,255,0.9);
+    text-align:center;
+    padding-top:20px;
+    /* display:table */ /*including on the clearfix*/
+}
+
+.home-box>.message-box div.top {
+    display:inline-block;
+    margin:0;
+}
+
+.home-box>.message-box div.top>p{
+    text-align: center;
+    font-size:70px;
+    font-weight:800;
+    text-transform:uppercase;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.home-box>.message-box div.bottom>p{
+    font-size:42px;
+    font-weight:400;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+/* section home */
+
+
+/* footer */
+footer {
+    background:#fff;
+    color:#19A3FF;
+    padding:30px 0;
+    margin-bottom:-20px;
+    opacity: 0.8;
+}
+
+footer ul.footer-nav {
+    list-style:none;
+    padding:0;
+    margin:0;
+    margin-bottom:24px;
+}
+
+footer ul.footer-nav li{
+    display:inline-block;
+    padding:0 15px;
+    line-height:24px;
+    border-right:1px solid #19A3FF;
+}
+
+footer ul.footer-nav li:first-child {
+    padding-left:0;
+}
+
+footer ul.footer-nav li:last-child {
+    border-right: none;
+}
+
+footer ul.footer-nav li a {
+    color:#19A3FF;
+    text-decoration:none;
+    font-size:14px;
+    line-height:24px;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    padding:0;
+}
+
+footer ul.footer-nav li a:hover,
+footer ul.footer-nav li a:active {
+    color:#229Cc8;
+    text-decoration:none;
+}
+
+footer p {
+    color:#19A3FF;
+    font-size:14px;
+    line-height:24px;
+    font-weight:400;
+}
+
+footer .right-col {
+    text-align:right;
+}
+
+footer .left-col h2,
+footer .right-col h2 {
+    text-transform:none;
+    font-size:18px;
+    line-height:24px;
+    font-weight:700;
+    margin:0 0 24px;
+}
+
+footer .right-col p {
+    font-size:15px;
+    line-height:24px;
+    font-weight:300;
+}
+/* end footer */
+
+
+/* responsive */
+@media (max-width: 1199px) {
+    .home-box .left-col p{
         font-size:28px;
         line-height:32px;
     }
 
-    .panel .left-col p span{
+    .home-box .left-col p span{
         font-size:36px;
     }
 
-    .panel .right-col p{
+    .home-box .right-col p{
         font-size:82px;
         line-height:82px;
     }
@@ -347,25 +311,25 @@ header.panel{
 
 @media (max-width: 991px) {
 
-    .panel .message-box{
+    .home-box .message-box{
         padding:10px 0;
     }
 
-    .panel .left-col {
+    .home-box .left-col {
         width:100%;
         text-align:center;
     }
 
-    .panel .left-col p{
+    .home-box .left-col p{
         padding:10px;
     }
 
-    .panel .right-col{
+    .home-box .right-col{
         width:100%;
         text-align:center;
     }
 
-    .panel .right-col p{
+    .home-box .right-col p{
         padding:10px;
     }
 
@@ -395,26 +359,26 @@ header.panel{
 }
 
 @media (max-width: 768px) {
-    .panel .left-col p{
+    .home-box .left-col p{
         font-size:24px;
         line-height:28px;
     }
 
-    .panel .left-col p span{
+    .home-box .left-col p span{
         font-size:32px;
     }
 
-    .panel .right-col p{
+    .home-box .right-col p{
         font-size:62px;
         line-height:62px;
     }
 
-    .main-footer ul.footer-nav{
+    .section-footer ul.footer-nav{
         margin-bottom:24px;
     }
 
-    .main-footer .left-col,
-    .main-footer .right-col{
+    .section-footer .left-col,
+    .section-footer .right-col{
         text-align:center;
     }
 
@@ -434,7 +398,7 @@ header.panel{
         height: auto;
     }
 
-    .panel .right-col p{
+    .home-box .right-col p{
         font-size:38px;
         line-height:38px;
     }

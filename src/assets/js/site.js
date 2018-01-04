@@ -15,23 +15,11 @@ $(document).ready(function() {
 		}
 	});
 
-    /*============================================
-	ScrollTo Links
-	==============================================*/
-	$("a.scrollto").click(function (e) {
-	    $("html,body").scrollTo(this.hash, this.hash, { gap: { y: -80 } });
-	    e.preventDefault();
-
-	    if ($(".navbar-collapse").hasClass("in")) {
-	        $(".navbar-collapse").removeClass("in").addClass("collapse");
-	    }
-	});
-
-	$(".panel").height($(window).height()+50);
+	$(".box").height($(window).height()+50);
 	$(".message-box").css({'marginTop':$(window).height()*0.4});
 
 	$("#alert>.close").click(function () {
-	    $("#show-message").removeClass("section-alert");
+	    $("#show-message").removeClass("show-alert");
 	    $("#show-message").addClass("display-none");
     });
     
@@ -43,21 +31,21 @@ $(document).ready(function() {
 
     $(window).on('scroll', function(){
         
-        if ($document.scrollTop() > navHeight){
+        if ($(document).scrollTop() > 80){
             
             /** Shrink navigation */
             $navbar.addClass('shrink');
             
             /** Scroll to top */
-            $scrollToTop.fadeIn();
+            $('.scroll-to-top').fadeIn();
         }
         else{
             
             /** Shrink navigation */
-            $navbar.removeClass('shrink');
+            $('.navbar').removeClass('shrink');
             
             /** Scroll to top */
-            $scrollToTop.fadeOut();
+            $('.scroll-to-top').fadeOut();
         }
     });
 });
@@ -72,9 +60,9 @@ function ShowMessage(kind, title, detail, timeoutSeg) {
 
     var timeout = timeoutSeg * 1000;
 
-    $("#section-alert").slideDown(function () {
+    $("#show-alert").slideDown(function () {
         setTimeout(function () {
-            $("#section-alert").slideUp(200);
+            $("#show-alert").slideUp(200);
         }, timeout);
     });
 
@@ -92,7 +80,7 @@ function ShowMessage(kind, title, detail, timeoutSeg) {
     }
 
     if (title != null) {
-        $("#title").html(title);
+        $("#show-message-title").html(title);
     }
 }
 
