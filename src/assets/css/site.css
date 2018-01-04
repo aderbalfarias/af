@@ -216,7 +216,9 @@ header.home-box {
 /* section home */
 
 
-/* footer */
+
+
+/* section footer */
 footer {
     background:#fff;
     color:#19A3FF;
@@ -271,17 +273,17 @@ footer p {
     font-weight:400;
 }
 
-footer .right-col {
-    text-align:right;
+footer > div.row {
+    text-align:center;
 }
 
-footer .left-col h2,
-footer .right-col h2 {
+footer h2 {
     text-transform:none;
     font-size:18px;
     line-height:24px;
     font-weight:700;
     margin:0 0 24px;
+    text-align:center
 }
 
 footer .right-col p {
@@ -289,11 +291,11 @@ footer .right-col p {
     line-height:24px;
     font-weight:300;
 }
-/* end footer */
+/* end section footer  */
 
 
 /* responsive */
-@media (max-width: 1199px) {
+/* @media (max-width: 1199px) {
     .home-box .left-col p{
         font-size:28px;
         line-height:32px;
@@ -356,90 +358,20 @@ footer .right-col p {
     .contato {
         padding: 50px 0 50px 0;
     }
+} */
+
+@media (min-width: 768px) {
+    /* section footer */   
+    footer div.col-sm-12.col-md-6:first-child>h2,
+    footer div.col-sm-12.col-md-6:first-child>p {
+        text-align:left;
+    }
+
+    footer div.col-sm-12.col-md-6:last-child>h2,
+    footer div.col-sm-12.col-md-6:last-child>p {
+        text-align:right;
+    }
+    /* end section footer  */
 }
 
-@media (max-width: 768px) {
-    .home-box .left-col p{
-        font-size:24px;
-        line-height:28px;
-    }
 
-    .home-box .left-col p span{
-        font-size:32px;
-    }
-
-    .home-box .right-col p{
-        font-size:62px;
-        line-height:62px;
-    }
-
-    .section-footer ul.footer-nav{
-        margin-bottom:24px;
-    }
-
-    .section-footer .left-col,
-    .section-footer .right-col{
-        text-align:center;
-    }
-
-    h1.section-title{
-        font-size:42px;
-        line-height:56px;
-    }
-}
-
-@media (max-width: 479px) {
-    body {
-        background-image: url("../Content/images/header-bg.jpg");
-        background-size: auto;
-        background-position: 50% 50%;
-        display: block;
-        max-width: 100%;
-        height: auto;
-    }
-
-    .home-box .right-col p{
-        font-size:38px;
-        line-height:38px;
-    }
-
-    h1.section-title{
-        font-size:32px;
-        line-height:46px;
-    }
-
-
-    p {
-        font-size:16px;
-        line-height:21px;
-    }
-
-    .btn-theme{
-        padding:15px 40px;
-        font-size:18px;
-    }
-
-    .socials{
-        text-align: center;
-    }
-
-    .title-contact {
-        text-align: center;
-    }
-
-    .contato > p {
-        text-align: center;
-    }
-
-    .sobre {
-        padding: 40px 0 50px 0;
-    }
-
-    .servico {
-        padding: 40px 0 50px 0;
-    }
-
-    .contato {
-        padding: 40px 0 50px 0;
-    }
-}
