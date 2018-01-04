@@ -27,7 +27,7 @@ $(document).ready(function() {
 	    }
 	});
 
-	$(".jumbotron").height($(window).height()+50);
+	$(".panel").height($(window).height()+50);
 	$(".message-box").css({'marginTop':$(window).height()*0.4});
 
 	$("#alert>.close").click(function () {
