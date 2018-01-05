@@ -15,5 +15,7 @@
   "bugs": {
     "url": "https://github.com/AderbalFarias/af/issues"
   },
-  "homepage": "https://github.com/AderbalFarias/af#readme"
+  "homepage": "https://github.com/AderbalFarias/af#readme",
+  "dependencies": {
+  }
 }

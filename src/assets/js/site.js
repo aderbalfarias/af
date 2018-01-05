@@ -1,86 +1,69 @@
-$(document).ready(function() {
-	if ($(window).scrollTop()===0){
-		$("#menu").removeClass("scrolled");
-	}
-	else{
-		$("#menu").addClass("scrolled");    
-	}
+$(document).ready(function($) {
+    var screenHeight = $(window).height();
+    var $showMessage = $("#show-message");
+    var $scrollToTop = $('.scroll-to-top');    
+    var $navbar = $('.navbar');
 
-	$(window).scroll(function(){
-		if ($(window).scrollTop()===0){
-			$("#menu").removeClass("scrolled");
-		}
-		else{
-			$("#menu").addClass("scrolled");    
-		}
-	});
-
-	$(".box").height($(window).height()+50);
-	$(".message-box").css({'marginTop':$(window).height()*0.4});
+    //set height to home-box
+	$(".home-box").height(screenHeight*0.8);
+	$(".message-box").css({'marginTop':screenHeight*0.3});
 
 	$("#alert>.close").click(function () {
-	    $("#show-message").removeClass("show-alert");
-	    $("#show-message").addClass("display-none");
+	    $showMessage.removeClass("show-alert");
+	    $showMessage.addClass("display-none");
     });
     
-    // $("#click").click(function (){
-    //     $('html, body').animate({
-    //         scrollTop: $("body").offset().top
-    //     }, 2000);
-    // });
-
-    $(window).on('scroll', function(){
-        
+    //scroll buttom
+    $(window).on('scroll', function(){        
         if ($(document).scrollTop() > 80){
-            
-            /** Shrink navigation */
             $navbar.addClass('shrink');
-            
-            /** Scroll to top */
-            $('.scroll-to-top').fadeIn();
+            $scrollToTop.fadeIn();
         }
         else{
-            
-            /** Shrink navigation */
-            $('.navbar').removeClass('shrink');
-            
-            /** Scroll to top */
-            $('.scroll-to-top').fadeOut();
+            $navbar.removeClass('shrink');
+            $scrollToTop.fadeOut();
         }
     });
-});
 
+    $("a").click(function(){
+        ShowMessage("Error", "Error ocorrido", "dd", 20);
+    })
+});
 
 //1: Success/Sucesso, 2: Info/Informação, 3: Warnnig/Aviso, 4: Error/Erro
 // TimeoutSeg = tempo para o timeout da mensagem, time in seconds
-function ShowMessage(kind, title, detail, timeoutSeg) {
+function ShowMessage(kind, title, message, timeoutSeg) {
+    var alert = $("#alert");
+    var showAlert = $("#show-message");
+
     if (timeoutSeg == undefined) {
         timeoutSeg = 8;
     }
 
     var timeout = timeoutSeg * 1000;
 
-    $("#show-alert").slideDown(function () {
+    showAlert.slideDown(function () {
         setTimeout(function () {
-            $("#show-alert").slideUp(200);
+            showAlert.slideUp(200);
         }, timeout);
     });
 
-    $("#alert").removeClass();
-    $("#alert").addClass("alert");
+    alert.removeClass();
+    alert.addClass("alert");
 
     if (kind == "Information") {
-        $("#alert").addClass("alert-info");
+        alert.addClass("alert-info");
     } else if (kind == "Success") {
-        $("#alert").addClass("alert-success");
+        alert.addClass("alert-success");
     } else if (kind == "Warning") {
-        $("#alert").addClass("alert-warning");
+        alert.addClass("alert-warning");
     } else if (kind == "Error") {
-        $("#alert").addClass("alert-danger");
+        alert.addClass("alert-danger");
     }
 
     if (title != null) {
-        $("#show-message-title").html(title);
+        $("#kind").html(title)
+        $("#show-message-title").html(message);
     }
 }
 

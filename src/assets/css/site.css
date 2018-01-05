@@ -115,24 +115,22 @@ a.decoration:focus {
 /* end buttons */
 
 /* scroll */
-.navbar.shrink {
+/* .navbar.shrink {
     z-index: 1000!important
-}
+} */
 
 .scroll-to-top {
-    border-radius: 2px;
-    display: none;
-    position: fixed;
-    right: 35px;
-    top: 94%;
-    text-align: center;
-    z-index: 999
+    border-radius:2px;
+    display:none;
+    position:fixed;
+    right:20px;
+    top:94%;
+    text-align:center;
+    z-index:999;
 }
 
 .scroll-to-top i {
-    color:#fff;
-    font-size:.875rem;
-    margin:0 9px 8px
+    width:100%;
 }
 /* end scroll */
 
@@ -166,8 +164,13 @@ a.decoration:focus {
     overflow:auto;
 }
 
-.message-title {
+.show-alert .message-title {
     display:inline-block;
+    padding-left:10px;
+}
+
+.show-alert .alert {
+    border-radius:0;
 }
 /* end section alert */
 
@@ -175,7 +178,7 @@ a.decoration:focus {
 .home-box {
     background:transparent;
     color:#19A3FF;
-    margin: 0;
+    margin:0;
 }
 
 header.home-box {
@@ -190,7 +193,7 @@ header.home-box {
     background:rgba(255,255,255,0.9);
     text-align:center;
     padding-top:20px;
-    /* display:table */ /*including on the clearfix*/
+    display:table;
 }
 
 .home-box>.message-box div.top {
