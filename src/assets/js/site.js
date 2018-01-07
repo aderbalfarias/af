@@ -1,6 +1,6 @@
 $(document).ready(function($) {
     var screenHeight = $(window).height();
-    var $showMessage = $("#show-message");
+    var $showMessage = $("#showMessage");
     var $scrollToTop = $('.scroll-to-top');    
     var $navbar = $('.navbar');
 
@@ -30,7 +30,7 @@ $(document).ready(function($) {
 // TimeoutSeg = tempo para o timeout da mensagem, time in seconds
 function ShowMessage(kind, title, message, timeoutSeg) {
     var alert = $("#alert");
-    var showAlert = $("#show-message");
+    var showAlert = $("#showMessage");
 
     if (timeoutSeg == undefined) {
         timeoutSeg = 8;
@@ -59,7 +59,7 @@ function ShowMessage(kind, title, message, timeoutSeg) {
 
     if (title != null) {
         $("#kind").html(title)
-        $("#show-message-title").html(message);
+        $("#showMessageTitle").html(message);
     }
 }
 
