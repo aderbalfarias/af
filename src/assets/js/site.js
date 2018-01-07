@@ -24,10 +24,6 @@ $(document).ready(function($) {
             $scrollToTop.fadeOut();
         }
     });
-
-    $("a").click(function(){
-        ShowMessage("Error", "Error ocorrido", "dd", 20);
-    })
 });
 
 //1: Success/Sucesso, 2: Info/Informação, 3: Warnnig/Aviso, 4: Error/Erro

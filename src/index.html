@@ -10,8 +10,7 @@
 
     <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="../bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="assets/css/threme.css" rel="stylesheet">
-    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/threme.css" rel="stylesheet"> -->
     <link href="assets/css/site.css" rel="stylesheet">
 </head>
 <body>
@@ -70,7 +69,7 @@
     <section id="show-message" class="container show-alert">
         <div id="alert">
             <a href="#" class="close" data-dismiss="alert">×</a>
-            <strong id="kind"></strong><span id="show-message-title" class="message-title"></b>
+            <strong id="kind"></strong><span id="showMessageTitle" class="message-title"></b>
         </div>
     </section>
 
@@ -83,13 +82,26 @@
                     </p>
                 </div>
                 <!-- Criar um carrossel para essa div -->
-                <div class="bottom">
-                    <p>Full Stack .Net Developer</p>
+                <div id="carouselContent" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active text-center p-4">
+                            <div class="bottom">
+                                <p>Full Stack .Net Developer</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item text-center p-4">
+                            <div class="bottom">
+                                <p>Software Engineering</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item text-center p-4">
+                            <div class="bottom">
+                                <p>Senior .Net Developer</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="bottom">
-                    <p>Software Engineering</p>
-                </div>
-            </div>
+            </div>            
         </div>
     </section>
   
