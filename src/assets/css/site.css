@@ -141,13 +141,14 @@ a.decoration:focus {
 
 /* section top */
 .top-bar {
-    background-color: #fff
+    /* background-color:#fff; */
+    background-color:transparent;
 }
 
 .top-bar .row ul,
 .top-bar .row ol {
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top:4px;
+    margin-bottom:4px;
 }
 /* end section top */
 
@@ -216,7 +217,9 @@ header.home-box {
 }
 /* section home */
 
-
+.navbar .navbar-dark .navbar-expand-lg .bg-dark .shrink{
+    z-index: 9999!important;
+}
 
 
 /* section footer */

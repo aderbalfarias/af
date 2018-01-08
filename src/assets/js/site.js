@@ -1,15 +1,12 @@
 $(document).ready(function($) {
     var $document = $(document);
     var $window = $(window);
-
     var $body = $('body');
-    var $showMessage = $("#showMessage");
+    var $showMessage = $('#showMessage');
     var $scrollToTop = $('.scroll-to-top');    
     var $navbar = $('.navbar');
-
     var screenHeight = $window.height();    
-    var navHeight = 80;
-    var navHeightShrink = 40;
+    var sHeight = 100;
 
     //set height to home-box
 	$(".home-box").height(screenHeight*0.8);
@@ -22,7 +19,7 @@ $(document).ready(function($) {
     
     //scroll buttom
     $window.on('scroll', function(){        
-        if ($document.scrollTop() > 80){
+        if ($document.scrollTop() > sHeight){
             $navbar.addClass('shrink');
             $scrollToTop.fadeIn();
         }
@@ -33,28 +30,13 @@ $(document).ready(function($) {
     });
 
     $window.on('load', function(){
-        /** Bootstrap scrollspy */
         var wWidth = Math.max($window.width(), window.innerWidth);
-        var wDefault = 992;   
+        var wScreen = 992;   
 
         $body.scrollspy({    
             target: '#navigation',
-            offset: wWidth >= wDefault ? navHeightShrink : navHeight
+            offset: 0
         });
-        
-        
-        // /** Sticky menu */ 
-        // if( isMobile.any()){
-        //     $navbar.addClass('is-mobile');
-        // }
-        
-        // if (!$navbar.hasClass('is-mobile') && wWidth >= wDefault){
-        //     $navbar.sticky({topSpacing:0});
-        // }
-        
-        if (wWidth >= wDefault){
-            $navbar.sticky({topSpacing:0});
-        }
     });
 });
 
