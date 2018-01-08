@@ -318,43 +318,18 @@ footer h2 {
 
 @media (min-width: 992px) {
     .navbar .nav-item {
-        height: 66px!important;
-        padding: 0 20px;
-    }
-
-    .navbar .nav-link {
-        padding-top: 24px!important;
-    }
-
-    .navbar .nav-link {
-        color: #fff!important;
-        display: inline-block;
-        font-size: .75rem;
-        padding: 0!important;
-        position: relative;
-    }
-
-    .navbar .nav-link, .navbar-brand {
-        font-family: Montserrat, sans-serif;
-        letter-spacing: .125rem;
-        opacity: .95;
-    }
-
-    .navbar .nav-link, .navbar-brand {
-        font-family: Montserrat, sans-serif;
-        letter-spacing: .125rem;
-        opacity: .95;
+        padding:0 20px;
     }
 
     .navbar, .navbar .nav-link, .navbar .nav-link:before, .navbar-header {
-        -webkit-transition: all .2s ease-in-out;
-        -moz-transition: all .2s ease-in-out;
-        -o-transition: all .2s ease-in-out;
-        transition: all .2s ease-in-out;
+        -webkit-transition:all .2s ease-in-out;
+        -moz-transition:all .2s ease-in-out;
+        -o-transition:all .2s ease-in-out;
+        transition:all .2s ease-in-out;
     }
 
     .btn, .mfp-counter, .mfp-title, .navbar .nav-link {
-        text-transform: uppercase;
+        text-transform:uppercase;
     }
 }
 

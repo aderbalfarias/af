@@ -9,7 +9,7 @@ $(document).ready(function($) {
 
     var screenHeight = $window.height();    
     var navHeight = 80;
-    var navHeightShrink = 66;
+    var navHeightShrink = 40;
 
     //set height to home-box
 	$(".home-box").height(screenHeight*0.8);
