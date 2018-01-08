@@ -233,6 +233,7 @@ footer p {
     font-size:14px;
     line-height:24px;
     font-weight:400;
+    text-align:center;
 }
 
 footer > div.row {
@@ -244,14 +245,7 @@ footer h2 {
     font-size:18px;
     line-height:24px;
     font-weight:700;
-    margin:0 0 24px;
     text-align:center
-}
-
-footer .right-col p {
-    font-size:15px;
-    line-height:24px;
-    font-weight:300;
 }
 /* end section footer  */
 
@@ -371,9 +365,14 @@ footer .right-col p {
         text-align:left;
     }
 
-    footer div.col-sm-12.col-md-6:last-child>h2,
-    footer div.col-sm-12.col-md-6:last-child>p {
+    footer div.col-sm-12.col-md-6:nth-child(2) h2,
+    footer div.col-sm-12.col-md-6:nth-child(2)>p {
         text-align:right;
+    }
+
+    footer div.col-sm-12.col-md-12:last-child h2,
+    footer div.col-sm-12.col-md-12:last-child>p {
+        text-align:left;
     }
     /* end section footer  */
 }
