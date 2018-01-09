@@ -254,88 +254,12 @@ footer h2 {
 
 
 /* responsive */
-/* @media (max-width: 1199px) {
-    .home-box .left-col p{
-        font-size:28px;
-        line-height:32px;
-    }
-
-    .home-box .left-col p span{
-        font-size:36px;
-    }
-
-    .home-box .right-col p{
-        font-size:82px;
-        line-height:82px;
-    }
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+        
 }
 
-@media (max-width: 991px) {
-
-    .home-box .message-box{
-        padding:10px 0;
-    }
-
-    .home-box .left-col {
-        width:100%;
-        text-align:center;
-    }
-
-    .home-box .left-col p{
-        padding:10px;
-    }
-
-    .home-box .right-col{
-        width:100%;
-        text-align:center;
-    }
-
-    .home-box .right-col p{
-        padding:10px;
-    }
-
-    .socials{
-        text-align: center;
-    }
-
-    .title-contact {
-        text-align: center;
-    }
-
-    .contato p {
-        text-align: center;
-    }
-
-    .sobre {
-        padding: 50px 0 50px 0;
-    }
-
-    .servico {
-        padding: 50px 0 50px 0;
-    }
-
-    .contato {
-        padding: 50px 0 50px 0;
-    }
-} */
-
-@media (min-width: 992px) {
-    .navbar .nav-item {
-        padding:0 20px;
-    }
-
-    .navbar, .navbar .nav-link, .navbar .nav-link:before, .navbar-header {
-        -webkit-transition:all .2s ease-in-out;
-        -moz-transition:all .2s ease-in-out;
-        -o-transition:all .2s ease-in-out;
-        transition:all .2s ease-in-out;
-    }
-
-    .btn, .mfp-counter, .mfp-title, .navbar .nav-link {
-        text-transform:uppercase;
-    }
-}
-
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     /* section footer */   
     footer div.col-sm-12.col-md-6:first-child>h2,
@@ -355,4 +279,28 @@ footer h2 {
     /* end section footer  */
 }
 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .navbar .nav-item {
+        padding:0 20px;
+    }
 
+    .navbar, .navbar .nav-link, .navbar .nav-link:before, .navbar-header {
+        -webkit-transition:all .2s ease-in-out;
+        -moz-transition:all .2s ease-in-out;
+        -o-transition:all .2s ease-in-out;
+        transition:all .2s ease-in-out;
+    }
+
+    .btn, .mfp-counter, .mfp-title, .navbar .nav-link {
+        text-transform:uppercase;
+    }
+
+    .nav-handle {
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    
+}
