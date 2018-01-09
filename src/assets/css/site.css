@@ -48,7 +48,6 @@ p {
     line-height: 24px;
     font-weight: 300;
     letter-spacing: 0.01em;
-    margin-bottom: 20px;
 }
 
 a {
@@ -200,14 +199,9 @@ a.decoration:focus {
     margin: 0;
 }
 
-header.home-box {
-    padding: 0;
-    min-height: 500px;
-}
-
 .home-box .message-box {
     width: 100%;
-    margin: 300px auto 0;
+    /* margin: 300px auto 0; */
     background: #fff;
     text-align: center;
     padding-top: 20px;
@@ -221,16 +215,20 @@ header.home-box {
 
 .home-box>.message-box div.top>p {
     text-align: center;
-    font-size: 70px;
+    font-size: 6.5vw;
     font-weight: 800;
     text-transform: uppercase;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .home-box>.message-box div.bottom>p {
-    font-size: 42px;
+    font-size: 3vw;
     font-weight: 400;
+    font-variant: small-caps;
+    margin-bottom: 0;
+    padding-bottom: 15px;
 }
 /* section home */
 
@@ -272,7 +270,24 @@ footer h2 {
 /* responsive */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
+    /* section home */
+    .home-box>.message-box div.top>p {
+        font-size: 5.5vw;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
+    .home-box>.message-box div.bottom>p {
+        font-size: 2.5vw;
+        margin-bottom: 5px;
+        padding-bottom: 10px;
+    }
+    /* section home */
+
+    .navbar .container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -289,6 +304,20 @@ footer h2 {
     .top-bar div.row>div:last-child{
         padding-top: inherit;
     }
+
+    /* section home */
+    .home-box>.message-box div.top>p {
+        font-size: 5vw;
+        padding-top: 25px;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+    }
+
+    .home-box>.message-box div.bottom>p {
+        font-size: 2vw;
+        padding-bottom: 15px;
+    }
+    /* section home */
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -310,6 +339,8 @@ footer h2 {
         text-transform: uppercase;
     }
 
+    
+
     /* section footer */   
     footer div.col-sm-12.col-lg-6:first-child>h2,
     footer div.col-sm-12.col-lg-6:first-child>p {
@@ -330,7 +361,15 @@ footer h2 {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-    
+    /* section home */
+    .home-box>.message-box div.top>p {
+        margin-bottom: 15px;
+    }
+
+    .home-box>.message-box div.bottom>p {
+        padding-bottom: 20px;
+    }
+    /* section home */
 }
 
 @media (max-width: 768px) {
