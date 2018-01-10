@@ -240,6 +240,19 @@ a.decoration:focus {
 .bg-gray {
     background-color: #363636!important
 }
+
+.limit {
+    max-width:300px;
+    max-height:300px;
+    width: auto;
+    height: auto;
+}
+
+.bg-resume {
+    background-color: #fff;
+    color: inherit;
+    padding-top: 50px;
+}
 /*end section resume */
 
 
