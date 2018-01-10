@@ -43,13 +43,6 @@ h2 {
     text-transform: uppercase;
 }
 
-p {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 300;
-    letter-spacing: 0.01em;
-}
-
 a {
     color: inherit;
     outline: none !important;
@@ -129,6 +122,9 @@ a.decoration:focus {
 }
 /* end scroll */
 
+.pt-top {
+    padding-top: 67px;
+}
 
 /* ==================================================== */
 /* Start specific style                                 */
@@ -218,6 +214,7 @@ a.decoration:focus {
     font-size: 6.5vw;
     font-weight: 800;
     text-transform: uppercase;
+    line-height: 24px;
     padding-top: 0;
     padding-bottom: 0;
     margin-bottom: 0;
@@ -227,6 +224,7 @@ a.decoration:focus {
     font-size: 3vw;
     font-weight: 400;
     font-variant: small-caps;
+    line-height: 24px;
     margin-bottom: 0;
     padding-bottom: 15px;
 }
@@ -251,8 +249,8 @@ a.decoration:focus {
 .bg-resume {
     background-color: #fff;
     color: inherit;
-    padding-top: 50px;
 }
+
 /*end section resume */
 
 
@@ -311,6 +309,10 @@ footer h2 {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    .pt-top {
+        padding-top: 40px;
+    }
+
     .top-bar div.row>div:first-child {
         display: inherit;
     } 
