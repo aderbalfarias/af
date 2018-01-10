@@ -236,6 +236,12 @@ a.decoration:focus {
     z-index: 9999!important;
 }
 
+/* section resume */
+.bg-gray {
+    background-color: #363636!important
+}
+/*end section resume */
+
 
 /* section footer */
 footer {
