@@ -18,29 +18,17 @@ h6{
 }
 
 h1 {
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.02em;
 }
 
-h1.title{
-    position: relative;
-    margin: 0 0 124px;
-    font-size: 48px;
-    line-height: 64px;
-    font-weight: 300;
-    text-align: center;
-    color: inherit;
-    z-index: 1;
-}
-
 h2 {
-    font-size: 21px;
-    line-height: 24px;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+h3 {
+    font-variant: small-caps;
 }
 
 a {
