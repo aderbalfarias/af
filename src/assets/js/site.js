@@ -21,17 +21,19 @@ $(document).ready(function($) {
     $window.on('scroll', function(){        
         if ($document.scrollTop() > sHeight){
             $navbar.addClass('shrink');
+            $navbar.removeClass('nav-md-none');
             $scrollToTop.fadeIn();
         }
         else{
             $navbar.removeClass('shrink');
+            $navbar.addClass('nav-md-none');
             $scrollToTop.fadeOut();
         }
     });
 
     $window.on('load', function(){
-        var wWidth = Math.max($window.width(), window.innerWidth);
-        var wScreen = 992;   
+        // var wWidth = Math.max($window.width(), window.innerWidth);
+        // var wScreen = 992;   
 
         $body.scrollspy({    
             target: '#navigation',

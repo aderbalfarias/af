@@ -1,20 +1,11 @@
 ﻿body {
-    font-family: Lato, sans-serif;
+    font-family: "Open Sans", sans-serif, Arial, serif;
     background-image: url("../images/bg.png");
     background-size: cover;
     background-position: 50% 0;
     background-attachment: fixed;
     color: #19a3ff;
     overflow-x: hidden;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
-    font-family: Lato, sans-serif;
 }
 
 h1 {
@@ -169,10 +160,6 @@ a.decoration:focus {
 /* end section alert */
 
 /* section navbar */
-.navbar {
-    padding: 0;
-}
-
 .navbar-dark{
     opacity: .9;
 }
@@ -332,6 +319,14 @@ footer h2 {
 
     .top-bar div.row>div:last-child{
         padding-top: inherit;
+    }
+
+    .navbar {
+        padding: 0;
+    }
+    
+    .nav-md-none {
+        display: none;
     }
 
     /* section home */
