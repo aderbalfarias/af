@@ -173,6 +173,10 @@ a.decoration:focus {
     padding: 0;
 }
 
+.navbar-dark{
+    opacity: .9;
+}
+
 .nav-link.page-scroll.active {
     border-bottom: 0.1rem solid;
 
@@ -229,15 +233,16 @@ a.decoration:focus {
 
 /* section about */
 .bg-dark-1 {
-    background-color: #2a2f33!important
+    background-color: #2a2f33!important;
+    border-bottom: 1px ridge #191b1b;
 }
 
 .bg-dark-3 {
-    background-color: #1c2125!important
+    background-color: #d3dce4!important
 }
 
 .bg-dark-2 {
-    background-color: #1a1e20!important
+    background-color: #b8c7cf!important
 }
 
 .limit {
@@ -245,6 +250,12 @@ a.decoration:focus {
     max-height:300px;
     width: auto;
     height: auto;
+}
+
+.border-5 {
+    border-width: 4px;
+    border-color: #19a3ff;
+    border-style: double;
 }
 
 .bg-about {
