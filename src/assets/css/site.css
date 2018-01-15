@@ -68,12 +68,17 @@ a.decoration:focus {
     font-weight: 600!important;
 }
 
-.letter-sp {
+.letter-sp-d1 {
+    letter-spacing: -.1rem;
+}
+
+.letter-sp-d3 {
     letter-spacing: -.3rem;
 }
 
 .pt-adjust {
     padding-top: 67px;
+    padding-bottom: 20px;
 }
 
 .bg-write-1 {
@@ -164,8 +169,8 @@ a.decoration:focus {
 
 .navbar .nav-link {
     font-size: .80rem;
-    letter-spacing: 0.20rem;
-    padding: 1rem 1rem;
+    letter-spacing: 0.1rem;
+    padding: 1rem 0 1rem 0;
 }
 /* end navbar */
 
@@ -257,7 +262,7 @@ a.decoration:focus {
 /* section contact */
 /* end section contact */
 
-/* section footer */
+/* footer */
 footer {
     padding: 30px 0;
     margin-bottom: -20px;
@@ -281,7 +286,7 @@ footer h2 {
     font-weight: 700;
     text-align: center
 }
-/* end section footer  */
+/* end footer  */
 
 /* responsive */
 /* Small devices (landscape phones, 576px and up) */
@@ -369,7 +374,7 @@ footer h2 {
     }
     /* end navbar */    
 
-    /* section footer */   
+    /* footer */   
     footer div.col-sm-12.col-lg-6:first-child>h2,
     footer div.col-sm-12.col-lg-6:first-child>p {
         text-align: left;
@@ -384,7 +389,7 @@ footer h2 {
     footer div.col-sm-12:last-child>p {
         text-align: left;
     }
-    /* end section footer */
+    /* end footer */
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
