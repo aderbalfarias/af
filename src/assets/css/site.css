@@ -101,6 +101,29 @@ a.decoration:focus {
     color: inherit;    
 }
 
+.border-lightblue {
+    border-color: #19a3ff;
+}
+
+.btn.border-lightblue:hover {
+    background-color: #19a3ff;
+    color: #fff;
+}
+
+/* animation */
+.t-eio-underline {
+    -webkit-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+}
+
+.navbar, .navbar .nav-link, .navbar .nav-link:before, .navbar-header {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+/* end animation */
+
 /* buttons */
 .btn-af {
     padding: 15px 90px;
@@ -163,6 +186,10 @@ a.decoration:focus {
 /* end section top */
 
 /* navbar */
+.navbar .nav-link {
+    text-transform: uppercase;
+}
+
 .nav-link.page-scroll.active {
     border-bottom: 0.1rem solid;
 }
@@ -216,7 +243,7 @@ a.decoration:focus {
 
 .home-box>.message-box div.top>p {
     text-align: center;
-    font-size: 6.5vw;
+    font-size: 7vw;
     font-weight: 800;
     text-transform: uppercase;
     line-height: 24px;
@@ -226,12 +253,19 @@ a.decoration:focus {
 }
 
 .home-box>.message-box div.bottom>p {
-    font-size: 3vw;
+    font-size: 3.5vw;
     font-weight: 400;
     font-variant: small-caps;
     line-height: 24px;
     margin-bottom: 0;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.btn-down {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 60px;
+    margin-bottom: 20px;
 }
 /* section home */
 
@@ -300,9 +334,9 @@ footer h2 {
     
     /* section home */
     .home-box>.message-box div.top>p {
-        font-size: 5.5vw;
+        font-size: 6.2vw;
         padding-top: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     }
 
     .home-box>.message-box div.bottom>p {
@@ -342,37 +376,31 @@ footer h2 {
 
     /* section home */
     .home-box>.message-box div.top>p {
-        font-size: 5vw;
-        padding-top: 25px;
-        padding-bottom: 20px;
+        font-size: 6vw;
+        padding-top: 20px;
+        padding-bottom: 15px;
         margin-bottom: 10px;
     }
 
     .home-box>.message-box div.bottom>p {
-        font-size: 2vw;
-        padding-bottom: 15px;
+        font-size: 2.5vw;
     }
     /* end section home */
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-    .btn, .mfp-counter, .mfp-title, .navbar .nav-link {
-        text-transform: uppercase;
-    }
-
     /* navbar */
     .navbar .nav-item {
         padding: 0 20px;
     }
-
-    .navbar, .navbar .nav-link, .navbar .nav-link:before, .navbar-header {
-        -webkit-transition: all .2s ease-in-out;
-        -moz-transition: all .2s ease-in-out;
-        -o-transition: all .2s ease-in-out;
-        transition: all .2s ease-in-out;
-    }
     /* end navbar */    
+
+    /* section home */
+    .home-box>.message-box div.bottom>p {
+        font-size: 2vw;
+    }
+    /* end section home */
 
     /* footer */   
     footer div.col-sm-12.col-lg-6:first-child>h2,
@@ -396,11 +424,7 @@ footer h2 {
 @media (min-width: 1200px) { 
     /* section home */
     .home-box>.message-box div.top>p {
-        margin-bottom: 15px;
-    }
-
-    .home-box>.message-box div.bottom>p {
-        padding-bottom: 20px;
+        margin-bottom: 20px;
     }
     /* section home */
 }
