@@ -13,15 +13,6 @@ h1 {
     letter-spacing: 0.02em;
 }
 
-h2 {
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-h3 {
-    font-variant: small-caps;
-}
-
 a {
     color: inherit;
     outline: none !important;
@@ -58,15 +49,55 @@ a.decoration:focus {
     display: none;
 }
 
-.semi-opac {
+.opac-5 {
     -ms-opacity: 0.5;
     opacity: 0.5;
 }
 
+.opac-8 {
+    -ms-opacity: 0.8;
+    opacity: 0.8;
+}
+
+.opac-9 {
+    -ms-opacity: 0.9;
+    opacity: 0.9;
+}
+
+.font-weight-6 {
+    font-weight: 600!important;
+}
+
+.letter-sp {
+    letter-spacing: -.3rem;
+}
+
+.pt-adjust {
+    padding-top: 67px;
+}
+
+.bg-write-1 {
+    background-color: #f5f5f5;
+    color: inherit;
+}
+
+.bg-write-2 {
+    background-color: #dbdbdb;
+    color: inherit;    
+}
+
+.bg-dark-1 {
+    background-color: #272727;
+    color: inherit;    
+}
+
+.bg-dark-2 {
+    background-color: #424040;
+    color: inherit;    
+}
+
 /* buttons */
 .btn-af {
-    color: #fff;
-    background-color: inherit;
     padding: 15px 90px;
     font-size: 24px;
     font-weight: 300;
@@ -79,10 +110,10 @@ a.decoration:focus {
     transition: background-color 0.2s ease-out;
 }
 
-.btn-af:hover {
+/* .btn-af:hover {
     background-color: #fff;
     color: inherit;
-}
+} */
 /* end buttons */
 
 /* scroll */
@@ -101,20 +132,11 @@ a.decoration:focus {
 }
 /* end scroll */
 
-.pt-adjust {
-    padding-top: 67px;
-}
-
 /* ==================================================== */
 /* Start specific style                                 */
 /* ==================================================== */
 
 /* section top */
-.top-bar {
-    /* background-color: #fff; */
-    background-color: transparent;
-}
-
 .top-bar .row ul,
 .top-bar .row ol {
     margin-top: 4px;
@@ -133,8 +155,19 @@ a.decoration:focus {
 .top-bar div.row>div:last-child {
     padding-top: 60px;
 }
-
 /* end section top */
+
+/* navbar */
+.nav-link.page-scroll.active {
+    border-bottom: 0.1rem solid;
+}
+
+.navbar .nav-link {
+    font-size: .80rem;
+    letter-spacing: 0.20rem;
+    padding: 1rem 1rem;
+}
+/* end navbar */
 
 /* section alert */
 .show-alert {
@@ -159,34 +192,13 @@ a.decoration:focus {
 }
 /* end section alert */
 
-/* section navbar */
-.navbar-dark{
-    opacity: .9;
-}
-
-.nav-link.page-scroll.active {
-    border-bottom: 0.1rem solid;
-
-}
-
-.navbar .nav-link {
-    font-size: .80rem;
-    letter-spacing: 0.20rem;
-    padding: 1rem 1rem;
-}
-/* end section navbar */
-
 /* section home */
 .home-box {
-    background: transparent;
-    color: inherit;
     margin: 0;
 }
 
 .home-box .message-box {
     width: 100%;
-    /* margin: 300px auto 0; */
-    background: #fff;
     text-align: center;
     padding-top: 20px;
     display: table;
@@ -219,19 +231,6 @@ a.decoration:focus {
 /* section home */
 
 /* section about */
-.bg-dark-1 {
-    background-color: #2a2f33!important;
-    border-bottom: 1px ridge #191b1b;
-}
-
-.bg-dark-3 {
-    background-color: #d3dce4!important
-}
-
-.bg-dark-2 {
-    background-color: #b8c7cf!important
-}
-
 .limit {
     max-width:300px;
     max-height:300px;
@@ -239,27 +238,29 @@ a.decoration:focus {
     height: auto;
 }
 
-.border-5 {
+.border-db-5 {
     border-width: 4px;
     border-color: #19a3ff;
     border-style: double;
 }
-
-.bg-about {
-    background-color: #3d3d3e;
-    color: inherit;
-}
-
 /*end section about */
 
+/* section education */
+/* end section education */
+
+/* section experience */
+/* end section education */
+
+/* section skills */
+/* end section skills */    
+
+/* section contact */
+/* end section contact */
 
 /* section footer */
 footer {
-    background-color: #fff;
-    color: inherit;
     padding: 30px 0;
     margin-bottom: -20px;
-    opacity: 0.8;
 }
 
 footer p {
@@ -282,10 +283,16 @@ footer h2 {
 }
 /* end section footer  */
 
-
 /* responsive */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
+    /* navbar */
+    .navbar .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    /* end navbar */
+    
     /* section home */
     .home-box>.message-box div.top>p {
         font-size: 5.5vw;
@@ -299,15 +306,11 @@ footer h2 {
         padding-bottom: 10px;
     }
     /* section home */
-
-    .navbar .container{
-        padding-left: 15px;
-        padding-right: 15px;
-    }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    /* section top */
     .top-bar div.row>div:first-child {
         display: inherit;
     } 
@@ -320,14 +323,17 @@ footer h2 {
     .top-bar div.row>div:last-child{
         padding-top: inherit;
     }
+    /* end section top */
 
+    /* navbar */
     .navbar {
         padding: 0;
     }
-    
+
     .nav-md-none {
         display: none;
     }
+    /* end navbar */
 
     /* section home */
     .home-box>.message-box div.top>p {
@@ -341,12 +347,16 @@ footer h2 {
         font-size: 2vw;
         padding-bottom: 15px;
     }
-    /* section home */
+    /* end section home */
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-    /* section navbar */
+    .btn, .mfp-counter, .mfp-title, .navbar .nav-link {
+        text-transform: uppercase;
+    }
+
+    /* navbar */
     .navbar .nav-item {
         padding: 0 20px;
     }
@@ -357,13 +367,7 @@ footer h2 {
         -o-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out;
     }
-    /* end section navbar */
-
-    .btn, .mfp-counter, .mfp-title, .navbar .nav-link {
-        text-transform: uppercase;
-    }
-
-    
+    /* end navbar */    
 
     /* section footer */   
     footer div.col-sm-12.col-lg-6:first-child>h2,
@@ -380,7 +384,7 @@ footer h2 {
     footer div.col-sm-12:last-child>p {
         text-align: left;
     }
-    /* end section footer  */
+    /* end section footer */
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -397,6 +401,7 @@ footer h2 {
 }
 
 @media (max-width: 768px) {
+    /* navbar */
     .navbar {
         left: 0;
         position: fixed;
@@ -404,4 +409,5 @@ footer h2 {
         top: 0;
         z-index: 1030;
     }
+    /* end navbar */    
 }
