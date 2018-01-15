@@ -68,6 +68,10 @@ a.decoration:focus {
     font-weight: 600!important;
 }
 
+.font-weight-7 {
+    font-weight: 700!important;
+}
+
 .letter-sp-d1 {
     letter-spacing: -.1rem;
 }
@@ -196,8 +200,14 @@ a.decoration:focus {
 
 .navbar .nav-link {
     font-size: .80rem;
-    letter-spacing: 0.1rem;
-    padding: 1rem 0 1rem 0;
+    letter-spacing: 0.12rem;
+    padding: 15px 0 5px 0;
+}
+
+.navbar .carrer {
+    border-left: .1rem solid;
+    padding-left: .3rem;
+    margin-left: .2rem;
 }
 /* end navbar */
 
@@ -349,6 +359,22 @@ footer h2 {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    /* section home */
+    .home-box>.message-box div.top>p {
+        font-size: 6vw;
+        padding-top: 20px;
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+    }
+
+    .home-box>.message-box div.bottom>p {
+        font-size: 2.5vw;
+    }
+    /* end section home */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
     /* section top */
     .top-bar div.row>div:first-child {
         display: inherit;
@@ -369,30 +395,21 @@ footer h2 {
         padding: 0;
     }
 
-    .nav-md-none {
+    .nav-lg-none {
         display: none;
     }
-    /* end navbar */
 
-    /* section home */
-    .home-box>.message-box div.top>p {
-        font-size: 6vw;
-        padding-top: 20px;
-        padding-bottom: 15px;
-        margin-bottom: 10px;
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0;
+        padding-left: 0;
     }
 
-    .home-box>.message-box div.bottom>p {
-        font-size: 2.5vw;
+    .navbar .nav-link {
+        padding: 27px 0 15px 0;
     }
-    /* end section home */
-}
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-    /* navbar */
     .navbar .nav-item {
-        padding: 0 20px;
+        padding: 0 13px;
     }
     /* end navbar */    
 
@@ -422,6 +439,12 @@ footer h2 {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
+    /* navbar */
+    .navbar .nav-item {
+        padding: 0 15px;
+    }
+    /* end navbar */    
+
     /* section home */
     .home-box>.message-box div.top>p {
         margin-bottom: 20px;
@@ -429,7 +452,7 @@ footer h2 {
     /* section home */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     /* navbar */
     .navbar {
         left: 0;

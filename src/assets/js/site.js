@@ -21,12 +21,12 @@ $(document).ready(function($) {
     $window.on('scroll', function(){        
         if ($document.scrollTop() > sHeight){
             $navbar.addClass('shrink');
-            $navbar.removeClass('nav-md-none');
+            $navbar.removeClass('nav-lg-none');
             $scrollToTop.fadeIn();
         }
         else{
             $navbar.removeClass('shrink');
-            $navbar.addClass('nav-md-none');
+            $navbar.addClass('nav-lg-none');
             $scrollToTop.fadeOut();
         }
     });
