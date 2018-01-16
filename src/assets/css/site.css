@@ -113,9 +113,17 @@ a.decoration:focus {
     border: 1px solid transparent;
 }
 
+.border-2 {
+    border-width: 2px;
+}
+
 .btn.border-lightblue:hover {
     background-color: #19a3ff;
     color: #fff;
+}
+
+.form-control {
+    border-radius: 0;
 }
 
 /* animation */
@@ -134,31 +142,23 @@ a.decoration:focus {
 
 /* buttons */
 .btn-af {
-    padding: 15px 90px;
-    font-size: 24px;
-    font-weight: 300;
     text-transform: uppercase;
-    border: none;
-    border-radius:0;
+    font-variant: small-caps;
+    border-radius: 0;
+    letter-spacing: .1rem;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out;
 }
-
-/* .btn-af:hover {
-    background-color: #fff;
-    color: inherit;
-} */
 /* end buttons */
 
 /* scroll */
 .scroll-to-top {
-    border-radius: 2px;
     display: none;
     position: fixed;
     right: 20px;
-    top: 94%;
+    bottom: 20px;
     text-align: center;
     z-index: 999;
 }

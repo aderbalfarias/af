@@ -232,49 +232,48 @@
     <section id="contact" class="bg-dark-1 pt-adjust">
         <div class="container">
             <h2 class="text-center font-weight-6 display-4 mb-2 letter-sp-d3">Contact Me</h2>   
-            
-
-                    <div class="row animated animated-done" data-animate="fadeIn" data-animate-delay="0.1" style="animation-delay: 0.1s;">
-                            <div class="col-md-6">
-                              <form id="contact-form" action="#" role="form">
-                                <div class="form-group animated animated-done" data-animate="fadeIn" data-animate-delay="0.2" style="animation-delay: 0.2s;">
-                                  <label class="sr-only" for="contact-name">Name</label>
-                                  <input type="text" class="form-control bg-white bg-op-5 bg-shadow" id="contact-name" placeholder="Name">
-                                </div>
-                                <div class="form-group animated animated-done" data-animate="fadeIn" data-animate-delay="0.3" style="animation-delay: 0.3s;">
-                                  <label class="sr-only" for="contact-email">Email</label>
-                                  <input type="email" class="form-control bg-white bg-op-5 bg-shadow" id="contact-email" placeholder="Email">
-                                </div>
-                                <div class="form-group animated animated-done" data-animate="fadeIn" data-animate-delay="0.4" style="animation-delay: 0.4s;">
-                                  <label class="sr-only" for="contact-message">Message</label>
-                                  <grammarly-ghost spellcheck="false"><div data-id="7e694f23-dc85-3cc9-4090-585608c688df" data-gramm_id="7e694f23-dc85-3cc9-4090-585608c688df" data-gramm="gramm" data-gramm_editor="true" class="gr_ver_2" gramm="true" contenteditable="true" style="position: absolute; color: transparent; overflow: hidden; white-space: pre-wrap; border-radius: 2px; box-sizing: border-box; height: 134px; width: 540px; margin: 108px 0px 0px 15px; padding: 6px 12px; z-index: 0; border-width: 1px; border-style: solid; background: none 0% 0% / auto repeat scroll padding-box padding-box rgba(255, 255, 255, 0.5); top: 0px; left: 0px;"><span style="display: inline-block; line-height: 24px; color: transparent; overflow: hidden; text-align: left; float: initial; clear: none; box-sizing: border-box; vertical-align: baseline; white-space: pre-wrap; width: 100%; margin: 0px; padding: 0px; border: 0px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 16px; font-family: &quot;Open Sans&quot;, Arial, serif; letter-spacing: normal; text-shadow: none; height: 132px;"></span><br></div></grammarly-ghost><textarea rows="5" class="form-control bg-white bg-op-5 bg-shadow" id="contact-message" placeholder="Message" data-gramm="true" data-txt_gramm_id="7e694f23-dc85-3cc9-4090-585608c688df" data-gramm_id="7e694f23-dc85-3cc9-4090-585608c688df" spellcheck="false" data-gramm_editor="true" style="z-index: auto; position: relative; line-height: 24px; font-size: 16px; transition: none; background: transparent !important;"></textarea><grammarly-btn><div class="_1BN1N Kzi1t _2DJZN" style="z-index: 2; transform: translate(524px, 211px);"><div class="_1HjH7"><div title="Protected by Grammarly" class="_3qe6h">&nbsp;</div></div></div></grammarly-btn>
-                                </div>
-                                <input type="button" class="btn btn-outline-primary btn-lg btn-block border-w-2" value="Send Message">
-                              </form>
+                <div class="row">
+                    <div class="col-lg-6 pt-4">
+                        <form id="contactForm" action="#" role="form">
+                            <div class="form-group">
+                                <label class="sr-only" for="contact-name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Name">
                             </div>
-                            <div class="col-md-5 offset-md-1 mt-4 mt-md-0 animated animated-done" data-animate="fadeIn" data-animate-delay="0.5" style="animation-delay: 0.5s;">
-                              <h4 class="mb-1 font-weight-bold">
-                                Clinton Jones Inc.
-                              </h4>
-                              <p class="mb-1">
-                                <abbr title="Address"><i class="fa fa-home pr-2"></i></abbr>
-                                Sunshine House, Sunville. SUN12 8LU.
-                              </p>
-                              <p class="mb-1">
-                                <abbr title="Email"><i class="fa fa-envelope pr-2"></i></abbr>
-                                info@appstrap.me
-                              </p>
-                              <p class="mb-0">
-                                <abbr title="Phone"><i class="fa fa-phone pr-2"></i></abbr>
-                                019223 8092344
-                              </p>
-                              <h5 class="font-weight-bold mt-4">
-                                Current Availability:
-                              </h5>
-                              <div class="progress w-60 mt-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="20 hours / week available">
-                                <div class="progress-bar w-70 progress-bar-sm bg-primary py-1" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="70"></div>
-                              </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="contact-email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email">
                             </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="contact-message">Message</label>
+                                <textarea rows="7" class="form-control" id="message" placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="button" class="btn btn-af btn-outline-primary btn-lg btn-block border-2" value="Send Message">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-5 offset-lg-1 pt-4">
+                        <h4 class="mb-1 font-weight-bold">
+                            Aderbal Farias
+                        </h4>
+                        <p class="mb-1">
+                            <abbr title="Address"><i class="fa fa-home pr-1"></i></abbr>
+                            Iona Road D9, Dublin                                
+                        </p>
+                        <p class="mb-1">
+                            <a href="mailto:aderbalfarias@hotmail.com">
+                                <i class="fa fa-envelope-o pr-1"></i> 
+                                aderbalfarias@hotmail.com
+                            </a>
+                        </p>
+                        <p class="mb-1">
+                            <a href="tel:+353838870514">
+                                <i class="fa fa-phone pr-1"></i> 
+                                +353 83 8870514
+                            </a>
+                        </p>
+                    </div>
+                </div>
             </div>  
         </div>
     </section>
@@ -300,7 +299,33 @@
                         Full Stack .Net Developer <br/>
                         Software Engineering <br/>
                         Senior .Net Developer <br/>
+                        <span class="d-inline-block">
+                            <a href="https://www.linkedin.com/in/aderbalfarias/" target="_blanck">
+                                <i class="fa fa-linkedin pr-1"></i>
+                            </a>
+                        </span>
+                        <span class="d-inline-block">
+                            <a href="https://www.youracclaim.com/users/aderbal-farias" target="_blanck" title="Certifications">
+                                <i class="fa fa-certificate pr-1"></i>
+                            </a>
+                        </span>
+                        <span class="d-inline-block">
+                            <a href="#" target="_blanck">
+                                <i class="fa fa-instagram pr-1"></i>
+                            </a>
+                        </span>
+                        <span class="d-inline-block">
+                            <a href="https://stackoverflow.com/users/7124118/aderbal-farias" target="_blanck">
+                                <i class="fa fa-stack-overflow pr-1"></i>
+                            </a>
+                        </span>
+                        <span class="d-inline-block">
+                            <a href="https://github.com/aderbalfarias" target="_blanck">
+                                <i class="fa fa-github pr-1"></i>
+                            </a>
+                        </span>
                     </p>
+                    
                 </div>
                 <div class="col-sm-12">
                     <p>&copy; 2018 Aderbal Farias. All Rights Reserved.</p>
@@ -320,3 +345,4 @@
     <script src="assets/js/site.js"></script>
 </body>
 </html>
+
