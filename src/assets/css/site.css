@@ -109,6 +109,10 @@ a.decoration:focus {
     border-color: #19a3ff;
 }
 
+.border-transparent{
+    border: 1px solid transparent;
+}
+
 .btn.border-lightblue:hover {
     background-color: #19a3ff;
     color: #fff;
