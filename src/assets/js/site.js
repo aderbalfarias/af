@@ -34,11 +34,13 @@ $(document).ready(function($) {
     $window.on('load', function(){
         // var wWidth = Math.max($window.width(), window.innerWidth);
         // var wScreen = 992;   
-
         $body.scrollspy({    
-            target: '#navigation',
-            offset: 0
+            target: '#navigation'
         });
+    });
+
+    $window.on('resize', function() {
+        $body.scrollspy('refresh');
     });
 });
 

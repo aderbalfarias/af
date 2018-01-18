@@ -127,16 +127,11 @@ a.decoration:focus {
 }
 
 /* animation */
-.t-eio-underline {
-    -webkit-transition: all .3s ease-in-out 0s;
-    transition: all .3s ease-in-out 0s;
-}
-
 .navbar, .navbar .nav-link, .navbar .nav-link:before, .navbar-header {
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 /* end animation */
 
@@ -196,10 +191,6 @@ a.decoration:focus {
 /* navbar */
 .navbar .nav-link {
     text-transform: uppercase;
-}
-
-.nav-link.page-scroll.active {
-    border-bottom: 0.1rem solid;
 }
 
 .navbar .nav-link {
@@ -281,6 +272,34 @@ a.decoration:focus {
     border-radius: 60px;
     margin-bottom: 20px;
 }
+
+.nav-link.page-scroll.active {
+    border-bottom: 0.1rem solid;
+}
+
+/* .t-eio-underline:hover {
+    border-bottom: 0.1rem solid #fff; 
+} */
+
+.t-eio-underline:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;    
+    bottom: 0;
+    left: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all .3s ease-in-out 0s; 
+    transition: all .3s ease-in-out 0s;
+}
+
+.t-eio-underline:hover:after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+
 /* section home */
 
 /* section about */
@@ -291,10 +310,16 @@ a.decoration:focus {
     height: auto;
 }
 
-.border-db-5 {
+.border-db-4 {
     border-width: 4px;
     border-color: #19a3ff;
     border-style: double;
+}
+
+.border-s-3 {
+    border-width: 3px;
+    border-color: #19a3ff;
+    border-style: solid;
 }
 /*end section about */
 
@@ -305,36 +330,39 @@ a.decoration:focus {
 /* end section education */
 
 /* section skills */
+.progress{
+    border-radius: 0;
+}
 /* end section skills */    
 
 /* section contact */
 /* end section contact */
 
-/* footer */
-footer {
+/* footer page */
+footer.page {
     padding: 30px 0;
     margin-bottom: -20px;
 }
 
-footer p {
+footer.page p {
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
     text-align: center;
 }
 
-footer > div.row {
+footer.page > div.row {
     text-align: center;
 }
 
-footer h2 {
+footer.page h2 {
     text-transform: none;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
     text-align: center
 }
-/* end footer  */
+/* end footer page  */
 
 /* responsive */
 /* Small devices (landscape phones, 576px and up) */
@@ -423,22 +451,22 @@ footer h2 {
     }
     /* end section home */
 
-    /* footer */   
-    footer div.col-sm-12.col-lg-6:first-child>h2,
-    footer div.col-sm-12.col-lg-6:first-child>p {
+    /* footer page */   
+    footer.page div.col-sm-12.col-lg-6:first-child>h2,
+    footer.page div.col-sm-12.col-lg-6:first-child>p {
         text-align: left;
     }
 
-    footer div.col-sm-12.col-lg-6:nth-child(2) h2,
-    footer div.col-sm-12.col-lg-6:nth-child(2)>p {
+    footer.page div.col-sm-12.col-lg-6:nth-child(2) h2,
+    footer.page div.col-sm-12.col-lg-6:nth-child(2)>p {
         text-align: right;
     }
 
-    footer div.col-sm-12:last-child h2,
-    footer div.col-sm-12:last-child>p {
+    footer.page div.col-sm-12:last-child h2,
+    footer.page div.col-sm-12:last-child>p {
         text-align: left;
     }
-    /* end footer */
+    /* end footer page */
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
