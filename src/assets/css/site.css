@@ -138,13 +138,18 @@ a.decoration:focus {
 /* buttons */
 .btn-af {
     text-transform: uppercase;
-    font-variant: small-caps;
+    color: #19a3ff;
+    background-color: transparent;
+    background-image: none;
     border-radius: 0;
     letter-spacing: .1rem;
-    -webkit-transition: background-color 0.2s ease-out;
-    -moz-transition: background-color 0.2s ease-out;
-    -o-transition: background-color 0.2s ease-out;
-    transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.4s ease-out;
+    transition: background-color 0.4s ease-out;
+}
+
+.btn-af:hover {
+    color: #fff;
+    background-color: #19a3ff;
 }
 /* end buttons */
 
