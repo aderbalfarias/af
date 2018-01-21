@@ -126,6 +126,10 @@ a.decoration:focus {
     border-radius: 0;
 }
 
+.br-0 {
+    border-radius: 0;
+}
+
 /* animation */
 .navbar, .navbar .nav-link, .navbar .nav-link:before, .navbar-header {
     -webkit-transition: all .3s ease-in-out;
