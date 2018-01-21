@@ -335,8 +335,12 @@ a.decoration:focus {
 /* end section education */
 
 /* section skills */
-.progress{
+.badge-sk {
+    padding: 0.5rem 0.6rem;
+    margin-top: 0.2rem;
     border-radius: 0;
+    background-color: #fff;
+    font-size: 80%;
 }
 /* end section skills */    
 
