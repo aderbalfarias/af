@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
     <link href="assets/css/site.css" rel="stylesheet">
 </head>
-<body ng-app="afApp" data-spy="scroll" data-target="#navigation">
+<body data-spy="scroll" data-target="#navigation">
     <!-- section top -->
     <section id="top" class="top-bar"></div>
         <div class="container">
@@ -372,7 +372,7 @@
     <!-- end section contact -->
 
     <!-- footer page -->
-    <footer ng-controller="footerController" class="page bg-write-1 opac-9">
+    <footer class="page bg-write-1 opac-9">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-lg-6">
@@ -420,7 +420,7 @@
                     
                 </div>
                 <div class="col-sm-12">
-                    <p>&copy; {{CurrentDate | date: 'yyyy'}} Aderbal Farias. All Rights Reserved.</p>
+                    <p>&copy; 2018 Aderbal Farias. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
@@ -434,9 +434,6 @@
  
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="assets/js/angular.js"></script>
-    <script src="assets/js/afApp.js"></script>
-    <script src="assets/js/footerController.js"></script>
     <script src="assets/js/site.js"></script>
 </body>
 </html>
