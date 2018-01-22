@@ -130,8 +130,13 @@ a.decoration:focus {
     border-radius: 0;
 }
 
-.border-block-left-5 {
-    border-width: 1px 1px 1px 4px;
+.border-block-4 {
+    border-width: 1px 4px 1px 4px;
+    border-style: solid;
+}
+
+.border-block-5 {
+    border-width: 1px 5px 1px 5px;
     border-style: solid;
 }
 
@@ -425,6 +430,21 @@ footer.page h2 {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+    .border-right-dotted-1 {
+        border-right-width: 1px;
+        border-right-style: dotted;
+    }
+
+    .border-block-lg-4 {
+        border-width: 1px 1px 1px 4px;
+        border-style: solid;
+    }
+
+    .border-block-lg-5 {
+        border-width: 1px 1px 1px 5px;
+        border-style: solid;
+    }
+
     /* section top */
     .top-bar div.row>div:first-child {
         display: inherit;
