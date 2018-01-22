@@ -130,6 +130,11 @@ a.decoration:focus {
     border-radius: 0;
 }
 
+.border-block-left-5 {
+    border-width: 1px 1px 1px 4px;
+    border-style: solid;
+}
+
 /* animation */
 .navbar, .navbar .nav-link, .navbar .nav-link:before, .navbar-header {
     -webkit-transition: all .3s ease-in-out;
