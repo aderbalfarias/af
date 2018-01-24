@@ -49,6 +49,12 @@ a.decoration:focus {
     display: none;
 }
 
+.display-5 {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
 .opac-5 {
     -ms-opacity: 0.5;
     opacity: 0.5;
