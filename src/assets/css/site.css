@@ -349,8 +349,8 @@ a.decoration:focus {
 
 /* section education */
 .limit-badge {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 180px;
+    max-height: 180px;
 }
 /* end section education */
 
@@ -529,6 +529,11 @@ footer.page h2 {
         margin-bottom: 20px;
     }
     /* section home */
+
+    .limit-badge-xl {
+        max-width: 200px;
+        max-height: 200px;
+    }
 }
 
 @media (max-width: 992px) {
