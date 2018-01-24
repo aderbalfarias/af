@@ -348,6 +348,10 @@ a.decoration:focus {
 /*end section about */
 
 /* section education */
+.limit-badge {
+    max-width: 200px;
+    max-height: 200px;
+}
 /* end section education */
 
 /* section experience */
