@@ -505,18 +505,18 @@ footer.page h2 {
     /* end section home */
 
     /* footer page */   
-    footer.page div.col-sm-12.col-lg-6:first-child>h2,
-    footer.page div.col-sm-12.col-lg-6:first-child>p {
+    footer.page div[class*="col-lg-"]:first-child>h2,
+    footer.page div[class*="col-lg-"]:first-child>p {
         text-align: left;
     }
 
-    footer.page div.col-sm-12.col-lg-6:nth-child(2) h2,
-    footer.page div.col-sm-12.col-lg-6:nth-child(2)>p {
+    footer.page div[class*="col-lg-"]:nth-child(2) h2,
+    footer.page div[class*="col-lg-"]:nth-child(2)>p {
         text-align: right;
     }
 
-    footer.page div.col-sm-12:last-child h2,
-    footer.page div.col-sm-12:last-child>p {
+    footer.page div:last-child h2,
+    footer.page div:last-child>p {
         text-align: left;
     }
     /* end footer page */
