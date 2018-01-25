@@ -87,8 +87,8 @@ a.decoration:focus {
 }
 
 .pt-adjust {
-    padding-top: 67px;
-    padding-bottom: 20px;
+    padding-top: 4.2rem;
+    padding-bottom: 2rem;
 }
 
 .bg-write-0 {
@@ -238,7 +238,7 @@ a.decoration:focus {
 
 /* section alert */
 .show-alert {
-    padding-top: 130px;
+    padding-top: 100px;
     position: fixed !important;
     top: 0;
     right: 0;
