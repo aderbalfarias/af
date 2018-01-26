@@ -11,6 +11,7 @@ $(document).ready(function($) {
     var screenHeight = $window.height();    
     var sHeight = 100;
     var navHeight = 62.800;
+    var widthScreenLg = 992;
 
     //set height to home-box
 	$(".home-box").height(screenHeight*0.8);
@@ -36,8 +37,6 @@ $(document).ready(function($) {
     });
 
     $window.on('load', function(){
-        // var wWidth = Math.max($window.width(), window.innerWidth);
-        // var wScreen = 992;   
         $body.scrollspy({    
             target: '#navigation'
         });
@@ -54,8 +53,12 @@ $(document).ready(function($) {
     });    
     
     function PageScroll(target){        
-        var plusNavHeight = $navbar.hasClass("shrink") ? 0 : navHeight;
-
+        var plusNavHeight = $window.width() > widthScreenLg 
+            ? $navbar.hasClass("shrink") 
+                ? 0 
+                : navHeight
+            : 0;
+            
         $htmlBody.stop().animate({
             scrollTop: $(target).offset().top + plusNavHeight
         }, 2000);   //}, 2000, 'easeInOutExpo');
