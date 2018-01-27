@@ -124,7 +124,7 @@ $(document).ready(function ($) {
     var counter = 0;
     var next = function () {
         objTs.setText(phrases[counter]).then(function () {
-            setTimeout(next, 1800);
+            setTimeout(next, 2000);
         });
         counter = (counter + 1) % phrases.length;
     };
