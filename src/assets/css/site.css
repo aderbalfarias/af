@@ -302,15 +302,11 @@ a.decoration:focus {
     margin-bottom: 1.3rem;
 }
 
-.nav-link.page-scroll.active {
-    border-bottom: 0.1rem solid;
-}
-
-/* .t-eio-underline:hover {
+.navlink-underline.active {
     border-bottom: 0.1rem solid #fff; 
-} */
+} 
 
-.t-eio-underline:after {
+.navlink-underline.active:after {
     content: "";
     position: absolute;
     height: 2px;
@@ -319,11 +315,11 @@ a.decoration:focus {
     left: 0;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transition: all .3s ease-in-out 0s; 
-    transition: all .3s ease-in-out 0s;
+    -webkit-transition: .3s ease-in-out 3s; 
+    transition: .3s ease-in-out 3s;
 }
 
-.t-eio-underline:hover:after {
+.navlink-underline.active:after {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }

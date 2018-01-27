@@ -12,6 +12,7 @@ $(document).ready(function($) {
     var sHeight = 100;
     var navHeight = 62.800;
     var widthScreenLg = 992;
+    var oneThousand = 1000;
 
     //set height to home-box
 	$(".home-box").height(screenHeight*0.8);
@@ -61,7 +62,7 @@ $(document).ready(function($) {
             
         $htmlBody.stop().animate({
             scrollTop: $(target).offset().top + plusNavHeight
-        }, 2000);   //}, 2000, 'easeInOutExpo');
+        }, oneThousand, "swing");
         
         //Retract the navigation after clicking on a item of the menu.
         $navbarCollapse.collapse('hide');
@@ -77,7 +78,7 @@ $(document).ready(function($) {
             timeoutSeg = 8;
         }
 
-        var timeout = timeoutSeg * 1000;
+        var timeout = timeoutSeg * oneThousand;
 
         showAlert.slideDown(function () {
             setTimeout(function () {
@@ -111,6 +112,5 @@ $(document).ready(function($) {
     function ShowMessageNoTimeOut(kind, title, detail) {
         var timeoutSeg = 600;
         ShowMessage(kind, title, detail, timeoutSeg);
-    }
+    } 
 });
-
