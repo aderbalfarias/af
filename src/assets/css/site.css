@@ -234,6 +234,33 @@ a.decoration:focus {
     padding-left: .3rem;
     margin-left: .2rem;
 }
+
+
+.navlink-underline {
+    position: relative;
+}
+
+.navlink-underline:after {
+    border-bottom: 0.1rem solid #fff; 
+} 
+
+.navlink-underline:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;    
+    bottom: 0;
+    left: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: .3s ease-in-out 0s; 
+    transition: .3s ease-in-out 0s;
+}
+
+.navlink-underline.active:after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
 /* end navbar */
 
 /* section alert */
@@ -301,30 +328,6 @@ a.decoration:focus {
     border-radius: 0;
     margin-bottom: 1.3rem;
 }
-
-.navlink-underline.active {
-    border-bottom: 0.1rem solid #fff; 
-} 
-
-.navlink-underline.active:after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 100%;    
-    bottom: 0;
-    left: 0;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: .3s ease-in-out 3s; 
-    transition: .3s ease-in-out 3s;
-}
-
-.navlink-underline.active:after {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-}
-
-
 /* section home */
 
 /* section about */
