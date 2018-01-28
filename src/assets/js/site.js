@@ -14,7 +14,6 @@ $(document).ready(function ($) {
     var widthScreenLg = 992;
     var oneThousand = 1000;
 
-    //set height to home-box
     $(".home-box").height(screenHeight * 0.8);
     $(".message-box").css({ 'marginTop': screenHeight * 0.3 });
 
@@ -23,7 +22,6 @@ $(document).ready(function ($) {
         $showMessage.addClass("display-none");
     });
 
-    //scroll buttom
     $window.on('scroll', function () {
         if ($document.scrollTop() > sHeight) {
             $navbar.addClass('shrink');
