@@ -1,13 +1,13 @@
 $(document).ready(function ($) {
     var $document = $(document);
     var $window = $(window);
-    var $body = $('body');
-    var $htmlBody = $('html, body');
-    var $showMessage = $('#showMessage');
-    var $scrollToTop = $('.scroll-to-top');
-    var $navbar = $('.navbar');
-    var $navbarCollapse = $('.navbar-collapse');
-    var $pageScrollClicked = $('a[class*=page-scroll]');
+    var $body = $("body");
+    var $htmlBody = $("html, body");
+    var $showMessage = $("#showMessage");
+    var $scrollToTop = $(".scroll-to-top");
+    var $navbar = $(".navbar");
+    var $navbarCollapse = $(".navbar-collapse");
+    var $pageScrollClicked = $("a[class*=page-scroll]");
     var screenHeight = $window.height();
     var sHeight = 100;
     var navHeight = 62.800;
@@ -15,38 +15,38 @@ $(document).ready(function ($) {
     var oneThousand = 1000;
 
     $(".home-box").height(screenHeight * 0.8);
-    $(".message-box").css({ 'marginTop': screenHeight * 0.3 });
+    $(".message-box").css({ "marginTop": screenHeight * 0.3 });
 
     $("#alert>.close").click(function () {
         $showMessage.removeClass("show-alert");
         $showMessage.addClass("display-none");
     });
 
-    $window.on('scroll', function () {
+    $window.on("scroll", function () {
         if ($document.scrollTop() > sHeight) {
-            $navbar.addClass('shrink');
-            $navbar.removeClass('nav-lg-none');
+            $navbar.addClass("shrink");
+            $navbar.removeClass("nav-lg-none");
             $scrollToTop.fadeIn();
         }
         else {
-            $navbar.removeClass('shrink');
-            $navbar.addClass('nav-lg-none');
+            $navbar.removeClass("shrink");
+            $navbar.addClass("nav-lg-none");
             $scrollToTop.fadeOut();
         }
     });
 
-    $window.on('load', function () {
+    $window.on("load", function () {
         $body.scrollspy({
-            target: '#navigation'
+            target: "#navigation"
         });
     });
 
-    $window.on('resize', function () {
-        $body.scrollspy('refresh');
+    $window.on("resize", function () {
+        $body.scrollspy("refresh");
     });
 
-    $pageScrollClicked.on('click', function (e) {
-        var target = $(this).attr('href');
+    $pageScrollClicked.on("click", function (e) {
+        var target = $(this).attr("href");
         PageScroll(target);
         e.preventDefault();
     });
@@ -63,7 +63,7 @@ $(document).ready(function ($) {
         }, oneThousand, "swing");
 
         //Retract the navigation after clicking on a item of the menu.
-        $navbarCollapse.collapse('hide');
+        $navbarCollapse.collapse("hide");
     };
 
     //1: Success/Sucesso, 2: Info/Informação, 3: Warnnig/Aviso, 4: Error/Erro
@@ -102,7 +102,7 @@ $(document).ready(function ($) {
             $("#showMessageTitle").html(message);
         }
 
-        $body.scrollspy('refresh');
+        $body.scrollspy("refresh");
     }
 
     //1: Success/Sucesso, 2: Info/Informação, 3: Warnnig/Aviso, 4: Error/Erro
