@@ -23,6 +23,7 @@ a:hover,
 a:focus {
     outline: none !important;
     text-decoration: none;
+    color: #757779;
 }
 
 a.decoration,
@@ -51,7 +52,6 @@ a.decoration:focus {
 
 .display-5 {
     font-size: 3rem;
-    font-weight: 300;
     line-height: 1.2;
 }
 
@@ -183,6 +183,13 @@ a.decoration:focus {
     bottom: 15px;
     text-align: center;
     z-index: 999;
+    background-color: #fff;
+    color: inherit;
+}
+
+.scroll-to-top:hover {
+    background-color: inherit;
+    color: #fff;
 }
 
 .scroll-to-top i {
@@ -453,6 +460,11 @@ footer.page h2 {
     .border-block-lg-5 {
         border-width: 1px 1px 1px 5px;
         border-style: solid;
+    }
+
+    .display-lg-5 {
+        font-size: 3.5rem;
+        line-height: 1.2;
     }
 
     /* section top */
