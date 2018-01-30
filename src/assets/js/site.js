@@ -9,7 +9,7 @@ $(document).ready(function ($) {
     var $navbarCollapse = $(".navbar-collapse");
     var $pageScrollClicked = $("a[class*=page-scroll]");
     var screenHeight = $window.height();
-    var sHeight = 100;
+    var sHeight = 700;
     var navHeight = 62.800;
     var widthScreenLg = 992;
     var oneThousand = 1000;
