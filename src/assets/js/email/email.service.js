@@ -1,4 +1,4 @@
-afApp.service("emailService", function ($http) {
+app.service("email.service", function ($http) {
 
     this.getEmail = function (id) {
        var req = $http.get("/api/Email/" + id);

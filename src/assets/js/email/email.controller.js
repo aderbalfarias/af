@@ -1,4 +1,4 @@
-afApp.controller("emailController", function ($scope, emailService) {
+app.controller("email.controller", function ($scope, emailService) {
     //Function to Reset Scope variables
     function initialize() {
         $scope.name = "";

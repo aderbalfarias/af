@@ -1,8 +1,8 @@
-var afApp;
+var app;
 (function () {
-    afApp = angular.module("afApp", []);
+    app = angular.module("app", []);
 
-    afApp.config(function ($httpProvider) {
+    app.config(function ($httpProvider) {
         $httpProvider.defaults.useXDomain = true;
         delete $httpProvider.defaults.headers.common["X-Requested-With"];
         delete $httpProvider.defaults.headers.common["Access-Control-Request-Method"];

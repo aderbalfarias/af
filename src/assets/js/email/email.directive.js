@@ -1,4 +1,4 @@
-//afApp.directive("emailForm",
+//app.directive("contatctForm",
 //    function () {
 //        return {
 //            restrict: "E",
