@@ -18,10 +18,10 @@ afApp.controller("emailController", function ($scope, emailService) {
 
             emailService.postEmail(email)
                 .success(function(data) {
-                    ShowMessage("Success", data, "Email sent with success!", 5);
+                    ShowMessage("Success", "Success", "Email sent with success!", 5);
                     initialize();
                 }).error(function() {
-                    ShowMessage("Error", "Ocorreu um erro inesperado: " + error, "");
+                    ShowMessage("Error", "Error", "Ocorreu um erro inesperado: " + error, 5);
                 });
         }
     };
