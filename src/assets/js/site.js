@@ -9,7 +9,8 @@ $(document).ready(function ($) {
     var $navbarCollapse = $(".navbar-collapse");
     var $pageScrollClicked = $("a[class*=page-scroll]");
     var screenHeight = $window.height();
-    var sHeight = 700;
+    var sHeightTop = 100;
+    var sHeightEnd = 700;
     var navHeight = 62.800;
     var widthScreenLg = 992;
     var oneThousand = 1000;
@@ -23,14 +24,18 @@ $(document).ready(function ($) {
     });
 
     $window.on("scroll", function () {
-        if ($document.scrollTop() > sHeight) {
+        if ($document.scrollTop() > sHeightTop) {
             $navbar.addClass("shrink");
             $navbar.removeClass("nav-lg-none");
-            $scrollToTop.fadeIn();
         }
         else {
             $navbar.removeClass("shrink");
             $navbar.addClass("nav-lg-none");
+        }
+        if ($document.scrollTop() > sHeightEnd) {
+            $scrollToTop.fadeIn();
+        }
+        else {
             $scrollToTop.fadeOut();
         }
     });
