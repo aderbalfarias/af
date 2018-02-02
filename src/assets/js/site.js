@@ -8,7 +8,6 @@ $(document).ready(function ($) {
     var $navbar = $(".navbar");
     var $navbarCollapse = $(".navbar-collapse");
     var $pageScrollClicked = $("a[class*=page-scroll]");
-    var $form = $("#contactForm")
     var screenHeight = $window.height();
     var sHeightTop = 100;
     var sHeightEnd = 700;
@@ -72,10 +71,35 @@ $(document).ready(function ($) {
         $navbarCollapse.collapse("hide");
     };
 
+    $("#sendEmail").on('click', function(e){
+        // $("#contactForm").validate();
+        // if ($("#contactForm").valid()){
+        // }
+        $.ajax({
+            url: "http://localhost:17219/api/email/afcontatosend",
+            type: "post",
+            dataType: "json",
+            data: $("#contactForm").serialize(),
+            success: function(data) {
+                if (data === true) {                    
+                    $.ShowMessage("Success", "Email Sent", "Your email has sent successfully", 5);
+                    $("#contactForm").find('input[type="text"], input[type="email"], textarea').val("");
+                } else {
+                    $.ShowMessage("Error", "Email Sent", "Happened a problem trying to send email", 5);
+                }                
+            },
+            error: function() {
+                $.ShowMessage("Error", "Something Wrong", "Happened an unexpected problem", 5);
+            }
+        });
+
+        e.preventDefault();
+    });
+  
     //1: Success/Sucesso, 2: Info/Informação, 3: Warnnig/Aviso, 4: Error/Erro
     // TimeoutSeg = tempo para o timeout da mensagem, time in seconds
-    function ShowMessage(kind, title, message, timeoutSeg) {
-        var alert = $("#alert");
+    $.ShowMessage = function (kind, title, message, timeoutSeg) {
+        var alertId = $("#alert");
         var showAlert = $("#showMessage");
 
         if (timeoutSeg == undefined) {
@@ -90,17 +114,17 @@ $(document).ready(function ($) {
             }, timeout);
         });
 
-        alert.removeClass();
-        alert.addClass("alert");
+        alertId.removeClass();
+        alertId.addClass("alert");
 
         if (kind == "Information") {
-            alert.addClass("alert-info");
+            alertId.addClass("alert-info");
         } else if (kind == "Success") {
-            alert.addClass("alert-success");
+            alertId.addClass("alert-success");
         } else if (kind == "Warning") {
-            alert.addClass("alert-warning");
+            alertId.addClass("alert-warning");
         } else if (kind == "Error") {
-            alert.addClass("alert-danger");
+            alertId.addClass("alert-danger");
         }
 
         if (title != null) {
@@ -113,11 +137,11 @@ $(document).ready(function ($) {
 
     //1: Success/Sucesso, 2: Info/Informação, 3: Warnnig/Aviso, 4: Error/Erro
     //No timeout = 10 min to timeout the message.
-    function ShowMessageNoTimeOut(kind, title, detail) {
+    $.ShowMessageNoTimeOut = function (kind, title, detail) {
         var timeoutSeg = 600;
         ShowMessage(kind, title, detail, timeoutSeg);
     }
- 
+
     var phrases = [
         "Full Stack Developer",
         "Software Engineer",
@@ -133,24 +157,10 @@ $(document).ready(function ($) {
         counter = (counter + 1) % phrases.length;
     };
     next();
-
-
-    $.ajax({
-        url: $form.attr('action'),
-        type: 'post',
-        dataType: 'json',
-        data: $form.serialize(),
-        success: function(data){
-            if (data === true){
-            ShowMessage("Success", "Email Sent", "Your email has sent successfully", 5)
-                $form.find('input[type="text"], input[type="email"], textarea, select').val('');
-            }
-            else{
-                $btnForm.html(errorMessage);
-            }
-        },
-        error: function(xhr, err){
-        }
-    });
 });
 
+
+    
+
+
+    

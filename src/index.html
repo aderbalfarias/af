@@ -452,21 +452,21 @@
             <h2 class="text-center text-lg-left font-weight-6 display-5 display-lg-5 mb-2 letter-sp-title pt-3 pb-lg-2">Contact Me</h2>   
                 <div class="row">
                     <div class="col-lg-7">
-                        <form name="contactForm" id="contactForm" role="form" ng-submit="submitForm(contactForm.$valid)">
+                        <form name="contactForm" id="contactForm" method="post">
                             <div class="form-group">
                                 <label class="sr-only" for="contact-name">Name</label>
-                                <input ng-model="name" type="text" class="form-control" id="name" name="name" placeholder="Name">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required maxlength="120">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="contact-email">Email</label>
-                                <input ng-model="from" type="email" class="form-control" id="from" name="from" placeholder="Email">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required maxlength="120">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="contact-message">Message</label>
-                                <textarea ng-model="body" rows="7" class="form-control" id="body" name="body" placeholder="Message"></textarea>
+                                <textarea rows="7" class="form-control" id="message" name="message" placeholder="Message" required></textarea>
                             </div>
                             <div class="form-group">
-                                <input type="submit" class="btn btn-af btn-outline-primary btn-lg btn-block border-2" value="Send Message">
+                                <input type="submit" id="sendEmail" class="btn btn-af btn-outline-primary btn-lg btn-block border-2" value="Send Message">
                             </div>
                         </form>
                     </div>
@@ -562,12 +562,6 @@
     <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="assets/js/text-scramble.js"></script>
     <script src="assets/js/site.js"></script>    
-    <script src="assets/js/angular.min.js"></script>
-    <script>
-        (function(){
-            ShowMessage("Error", "teste", "", 5);
-        });
-    </script>
 </body>
 </html>
 
