@@ -8,6 +8,7 @@ $(document).ready(function ($) {
     var $navbar = $(".navbar");
     var $navbarCollapse = $(".navbar-collapse");
     var $pageScrollClicked = $("a[class*=page-scroll]");
+    var $form = $("#contactForm")
     var screenHeight = $window.height();
     var sHeightTop = 100;
     var sHeightEnd = 700;
@@ -108,7 +109,7 @@ $(document).ready(function ($) {
         }
 
         $body.scrollspy("refresh");
-    }
+    };
 
     //1: Success/Sucesso, 2: Info/Informação, 3: Warnnig/Aviso, 4: Error/Erro
     //No timeout = 10 min to timeout the message.
@@ -132,5 +133,24 @@ $(document).ready(function ($) {
         counter = (counter + 1) % phrases.length;
     };
     next();
+
+
+    $.ajax({
+        url: $form.attr('action'),
+        type: 'post',
+        dataType: 'json',
+        data: $form.serialize(),
+        success: function(data){
+            if (data === true){
+            ShowMessage("Success", "Email Sent", "Your email has sent successfully", 5)
+                $form.find('input[type="text"], input[type="email"], textarea, select').val('');
+            }
+            else{
+                $btnForm.html(errorMessage);
+            }
+        },
+        error: function(xhr, err){
+        }
+    });
 });
 

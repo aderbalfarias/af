@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
     <link href="assets/css/site.css" rel="stylesheet">
 </head>
-<body ng-app="app" data-spy="scroll" data-target="#navigation">
+<body data-spy="scroll" data-target="#navigation">
     <!-- section top -->
     <section id="top" class="top-bar"></div>
         <div class="container">
@@ -447,12 +447,12 @@
     <!-- end section skills -->    
 
     <!-- section contact -->
-    <section ng-controller="emailController" id="contact" class="bg-dark-1 pt-adjust">
+    <section id="contact" class="bg-dark-1 pt-adjust">
         <div class="container">
             <h2 class="text-center text-lg-left font-weight-6 display-5 display-lg-5 mb-2 letter-sp-title pt-3 pb-lg-2">Contact Me</h2>   
                 <div class="row">
                     <div class="col-lg-7">
-                        <form name="contactForm" role="form" ng-submit="submitForm(contactForm.$valid)">
+                        <form name="contactForm" id="contactForm" role="form" ng-submit="submitForm(contactForm.$valid)">
                             <div class="form-group">
                                 <label class="sr-only" for="contact-name">Name</label>
                                 <input ng-model="name" type="text" class="form-control" id="name" name="name" placeholder="Name">
@@ -561,14 +561,13 @@
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="assets/js/text-scramble.js"></script>
-    <script src="assets/js/site.js"></script>
-    
+    <script src="assets/js/site.js"></script>    
     <script src="assets/js/angular.min.js"></script>
-    <script src="assets/js/afApp.js"></script>
-    <script src="assets/js/email/emailService.js"></script>
-    <script src="assets/js/email/emailController.js"></script>
-    <script src="assets/js/email/emailDirective.js"></script>
-
+    <script>
+        (function(){
+            ShowMessage("Error", "teste", "", 5);
+        });
+    </script>
 </body>
 </html>
 
