@@ -112,7 +112,7 @@ a.decoration:focus {
 }
 
 .bg-dark-2 {
-    background-color: #424040;
+    background-color: #1c1c1c;
     color: inherit;    
 }
 
@@ -242,7 +242,6 @@ a.decoration:focus {
     padding-left: .3rem;
     margin-left: .2rem;
 }
-
 
 .navlink-underline {
     position: relative;
