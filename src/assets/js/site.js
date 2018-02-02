@@ -72,26 +72,29 @@ $(document).ready(function ($) {
     };
 
     $("#sendEmail").on('click', function(e){
-        // $("#contactForm").validate();
-        // if ($("#contactForm").valid()){
-        // }
-        $.ajax({
-            url: "http://localhost:17219/api/email/afcontatosend",
-            type: "post",
-            dataType: "json",
-            data: $("#contactForm").serialize(),
-            success: function(data) {
-                if (data === true) {                    
-                    $.ShowMessage("Success", "Email Sent", "Your email has sent successfully", 5);
-                    $("#contactForm").find('input[type="text"], input[type="email"], textarea').val("");
-                } else {
-                    $.ShowMessage("Error", "Email Sent", "Happened a problem trying to send email", 5);
-                }                
-            },
-            error: function() {
-                $.ShowMessage("Error", "Something Wrong", "Happened an unexpected problem", 5);
-            }
-        });
+        $("#contactForm").validate();
+
+        if ($("#contactForm").valid()) {
+            $.ajax({
+                url: "http://localhost:17219/api/email/afcontatosend",
+                type: "post",
+                dataType: "json",
+                data: $("#contactForm").serialize(),
+                success: function(data) {
+                    if (data === true) {                    
+                        $.ShowMessage("Success", "Email Sent", "Your email has sent successfully", 5);
+                        $("#contactForm").find('input[type="text"], input[type="email"], textarea').val("");
+                    } else {
+                        $.ShowMessage("Error", "Email Sent", "Happened a problem trying to send email", 5);
+                    }                
+                },
+                error: function() {
+                    $.ShowMessage("Error", "Something Wrong", "Happened an unexpected problem", 5);
+                }
+            });
+        } else {
+            $.ShowMessage("Warning", "Verify the Form", "You are missing something", 5);
+        }      
 
         e.preventDefault();
     });
