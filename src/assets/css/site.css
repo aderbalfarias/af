@@ -23,7 +23,7 @@ a:hover,
 a:focus {
     outline: none !important;
     text-decoration: none;
-    color: #757779;
+    color: #fff;
 }
 
 a.decoration,
@@ -120,8 +120,12 @@ a.decoration:focus {
     border-color: #19a3ff;
 }
 
-.border-transparent{
+.border-transparent {
     border: 1px solid transparent;
+}
+
+.border-black {
+    border-bottom: 1px solid #000;
 }
 
 .border-2 {

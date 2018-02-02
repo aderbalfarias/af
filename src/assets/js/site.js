@@ -8,13 +8,14 @@ $(document).ready(function ($) {
     var $navbar = $(".navbar");
     var $navbarCollapse = $(".navbar-collapse");
     var $pageScrollClicked = $("a[class*=page-scroll]");
+    var $contactForm = $("#contactForm");
     var screenHeight = $window.height();
     var sHeightTop = 100;
     var sHeightEnd = 700;
     var navHeight = 62.800;
     var widthScreenLg = 992;
     var oneThousand = 1000;
-
+    
     $(".home-box").height(screenHeight * 0.8);
     $(".message-box").css({ "marginTop": screenHeight * 0.3 });
 
@@ -71,19 +72,18 @@ $(document).ready(function ($) {
         $navbarCollapse.collapse("hide");
     };
 
+    $contactForm.validate();    
     $("#sendEmail").on('click', function(e){
-        $("#contactForm").validate();
-
-        if ($("#contactForm").valid()) {
+        if ($contactForm.valid()) {
             $.ajax({
                 url: "http://localhost:17219/api/email/afcontatosend",
                 type: "post",
                 dataType: "json",
-                data: $("#contactForm").serialize(),
+                data: $contactForm.serialize(),
                 success: function(data) {
                     if (data === true) {                    
                         $.ShowMessage("Success", "Email Sent", "Your email has sent successfully", 5);
-                        $("#contactForm").find('input[type="text"], input[type="email"], textarea').val("");
+                        $contactForm.find('input[type="text"], input[type="email"], textarea').val("");
                     } else {
                         $.ShowMessage("Error", "Email Sent", "Happened a problem trying to send email", 5);
                     }                
