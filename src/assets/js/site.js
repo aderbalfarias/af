@@ -76,7 +76,7 @@ $(document).ready(function ($) {
     $("#sendEmail").on('click', function(e){
         if ($contactForm.valid()) {
             $.ajax({
-                url: "http://localhost:17219/api/email/afcontatosend",
+                url: "/api/email/afcontatosend",
                 type: "post",
                 dataType: "json",
                 data: $contactForm.serialize(),
