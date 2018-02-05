@@ -1,8 +1,10 @@
 ﻿body {
     font-family: "Open Sans", sans-serif, Arial, serif;
     background-image: url("../images/bg.png");
+    -webkit-background-size: cover;
     background-size: cover;
-    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-attachment: fixed;
     color: #19a3ff;
     overflow-x: hidden;
@@ -107,12 +109,12 @@ a.decoration:focus {
 }
 
 .bg-dark-1 {
-    background-color: #272727;
+    background-color: #2e2e2e;
     color: inherit;    
 }
 
 .bg-dark-2 {
-    background-color: #1c1c1c;
+    background-color: #505050;
     color: inherit;    
 }
 
