@@ -160,6 +160,8 @@ $(document).ready(function ($) {
         counter = (counter + 1) % phrases.length;
     };
     next();
+
+    $.post("http://aderbalfarias.com/api/email/test");
 });
 
 
