@@ -544,6 +544,7 @@ footer.page h2 {
     /* section home */
     .home-box>.message-box div.top>p {
         margin-bottom: 20px;
+		font-size: 5vw;
     }
     /* section home */
 
