@@ -3,5 +3,3 @@ dist
 .tmp
 bower_components
 test/bower_components
-
-src/assets/css/threme.css
