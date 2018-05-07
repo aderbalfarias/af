@@ -75,11 +75,17 @@ $(document).ready(function ($) {
     $contactForm.validate();    
     $("#sendEmail").on('click', function(e){
         if ($contactForm.valid()) {
+            var formJson = {};
+            $.map($contactForm.serializeArray(), function(n, i){
+                formJson[n['name']] = n['value'];
+            });
+
             $.ajax({
                 url: "/api/email/afcontatosend",
                 type: "post",
+                contentType: "application/json; charset=UTF-8",
                 dataType: "json",
-                data: $contactForm.serialize(),
+                data: JSON.stringify(formJson),
                 success: function(data) {
                     if (data === true) {                    
                         $.ShowMessage("Success", "Email Sent", "Your email has sent successfully", 5);
@@ -165,7 +171,7 @@ $(document).ready(function ($) {
 });
 
 
-    
+
 
 
     
