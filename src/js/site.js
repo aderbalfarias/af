@@ -167,7 +167,7 @@ $(document).ready(function ($) {
     };
     next();
 
-    $.post("http://aderbalfarias.com/api/email/test");
+    var x = $.post("https://aderbalfarias.com/api/email/test");
 });
 
 
