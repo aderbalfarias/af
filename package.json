@@ -17,5 +17,6 @@
   },
   "homepage": "https://github.com/AderbalFarias/af#readme",
   "dependencies": {
+    "jshint": "^2.9.6"
   }
 }
