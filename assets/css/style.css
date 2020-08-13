@@ -355,6 +355,7 @@ section {
 .about .content ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
 }
 
 .about .content ul li {
@@ -677,5 +678,9 @@ section {
 @media (min-width: 992px) {
   #footer {
     padding-left: 100px;
+  }
+
+  .about .content ul {
+    margin-bottom: 1.2em;
   }
 }
